@@ -1,0 +1,40 @@
+@use "../../partials/colors" as*;
+
+.header {
+    &__top {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__home {
+        text-decoration: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 8rem;
+    }
+
+    &__mobile {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__bottom {
+        background-color: $wine-red;
+        color: $beige;
+        text-align: center;
+        padding: .2rem 2rem;
+    }
+
+    &__title {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        transform: translateY(2px);
+    }
+}

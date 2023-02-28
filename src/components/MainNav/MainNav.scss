@@ -1,0 +1,31 @@
+@use "../../partials/colors"as*;
+
+.main-nav {
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+    &__item {
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        padding: .3rem 1rem;
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: $wine-red;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 1px solid $wine-red;
+            scale: 1.1;
+        }
+    }
+}
+.active {
+    border-bottom: 1px solid $wine-red;
+    scale: 1.1;
+}
