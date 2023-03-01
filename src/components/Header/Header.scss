@@ -17,6 +17,16 @@
             max-width: 80rem;
         }
     }
+    &__right {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        @include desktop {
+            gap: 2rem;
+            flex-direction: row;
+        }
+    }
     &__home {
         text-decoration: none;
         padding: 0;
@@ -31,6 +41,21 @@
         }
         @include desktop {
             width: 8rem;
+        }
+    }
+    &__language{
+        background-color: transparent;
+        border: none;
+    }
+    &__icon {
+        width: 1.5rem;
+
+        @include tablet {
+            width: 2rem;
+        }
+
+        @include tiny-mobile {
+            width: 1.25rem;
         }
     }
 
