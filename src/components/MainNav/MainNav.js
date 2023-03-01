@@ -27,9 +27,6 @@ function MainNav() {
         <li className="main-nav__item">
           <NavLink to='/contact-us' className="main-nav__link">Contact Us</NavLink>
         </li>
-        <li className="main-nav__item">
-          <span className="main-nav__link">Bulgarian</span>
-        </li>
       </ul>
     </nav>
   );
