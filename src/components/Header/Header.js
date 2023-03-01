@@ -17,7 +17,7 @@ function Header() {
     <header className="header">
       <div className="header__top">
         <Link to="/" className="header__home">
-          <img className="header__logo" src={logoEn} alt="logo" />
+          <img className="header__logo" src={language === "bg" ? logoBg : logoEn} alt="logo" />
         </Link>
         {language === "bg" ? <MainNavBg /> : <MainNav />}
         <div className="header__right">
