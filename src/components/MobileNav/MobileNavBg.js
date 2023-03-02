@@ -25,7 +25,7 @@ function MobileNavBg() {
         }}
         className="mobile-nav__button"
       >
-        <img src={navIcon} className="mobile-nav__icon" />
+        <img src={navIcon} className="mobile-nav__icon" alt="menu icon" />
       </button>
       <nav
         className={`mobile-nav__box ${
@@ -43,7 +43,7 @@ function MobileNavBg() {
             </li>
             <li className="mobile-nav__item">
               <NavLink to="/worship-offices" className="mobile-nav__link">
-                Служби{" "}
+              Богослужения
               </NavLink>
             </li>
             <li className="mobile-nav__item">
@@ -53,7 +53,7 @@ function MobileNavBg() {
             </li>
             <li className="mobile-nav__item">
               <NavLink to="/community-news" className="mobile-nav__link">
-                Новини{" "}
+                Новини
               </NavLink>
             </li>
             <li className="mobile-nav__item">

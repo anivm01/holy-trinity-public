@@ -25,7 +25,7 @@ function MobileNav() {
         }}
         className="mobile-nav__button"
       >
-        <img src={navIcon} className="mobile-nav__icon" />
+        <img src={navIcon} className="mobile-nav__icon" alt="menu icon" />
       </button>
       <nav
         className={`mobile-nav__box ${

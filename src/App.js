@@ -1,21 +1,25 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.scss';
-import Header from './components/Header/Header';
-import { LanguageProvider } from './utils/LanguageContext';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.scss";
+import Header from "./components/Header/Header";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import EventsPage from "./pages/EventsPage/EventsPage";
+import HomePage from "./pages/HomePage/HomePage";
+import InMemoriamPage from "./pages/InMemoriamPage/InMemoriamPage";
+import { LanguageProvider } from "./utils/LanguageContext";
 
 function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
-     <Header/>
+        <Header />
         <Routes>
-          <Route to='/' />
-          <Route to='/about' />
-          <Route to='/contact-us' />
-          <Route to='/in-memoriam' />
-          <Route to='/community-news' />
-          <Route to='/events' />
-          <Route to='/worship-offices' />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />}/>
+          <Route path="/contact-us"  />
+          <Route path="/in-memoriam" element={<InMemoriamPage />} />
+          <Route path="/community-news" />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/worship-offices" />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

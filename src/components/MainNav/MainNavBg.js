@@ -10,7 +10,7 @@ function MainNavBg() {
           <NavLink to="/" className="main-nav__link">Начало</NavLink>
         </li>
         <li className="main-nav__item">
-          <NavLink to="/worship-offices" className="main-nav__link">Служби</NavLink>
+          <NavLink to="/worship-offices" className="main-nav__link">Богослужения</NavLink>
         </li>
         <li className="main-nav__item">
           <NavLink to='/events' className="main-nav__link">Събития</NavLink>
