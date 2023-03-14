@@ -1,18 +1,20 @@
-import React from "react";
-import "./InMemoriamPage.scss";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Hero from "../../components/Hero/Hero";
 import HeroBg from "../../components/Hero/HeroBg";
-import memoriamHero from "../../assets/candles.jpg";
-import { useLanguage } from "../../utils/LanguageContext";
 import { API_URL } from "../../utils/api";
+import { useLanguage } from "../../utils/LanguageContext";
 import useFetch from "../../utils/useFetch";
-import Obituaries from "../../components/Obituaries/Obituaries";
+import communityHeroImage from "../../assets/iconostas.jpg";
+import "./CommunityNewsPage.scss";
+import { sortNewestToOldest } from "../../utils/sort";
+import CommunityNewsList from "../../components/CommunityNewsList/CommunityNewsList";
 import NoData from "../../components/NoData/NoData";
 import { ThreeDots } from "react-loader-spinner";
 
-function InMemoriamPage() {
+function CommunityNewsPage() {
   const language = useLanguage();
-  const { data, loading, error } = useFetch(`${API_URL}/obituary/${language}`);
+  const { data, loading, error } = useFetch(`${API_URL}/published/${language}/articles`);
 
   if (loading) {
     return (
@@ -37,18 +39,16 @@ function InMemoriamPage() {
     return (
       <main>
         {language === "bg" ? (
-          <HeroBg
-            image={memoriamHero}
-            title={"Упокой Господи дуиште на починалите"}
-          />
+          <HeroBg image={communityHeroImage} title={"Новини"} />
         ) : (
-          <Hero image={memoriamHero} title={"In Memoriam"} />
+          <Hero image={communityHeroImage} title={"Community News"} />
         )}
-        <Obituaries data={data} />
+        <CommunityNewsList data={data} />
       </main>
     );
   }
+
   return <NoData />;
 }
 
-export default InMemoriamPage;
+export default CommunityNewsPage;

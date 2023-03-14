@@ -1,0 +1,32 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+
+.events-page {
+    &__heading {
+        color: $wine-red;
+        font-size: 1.25rem;
+        padding: 1rem;
+        background-color: $golden;
+        margin: 1rem auto;
+        border-bottom: 4px solid $wine-red;
+        
+        @include desktop {
+            font-size: 1.75rem;
+            max-width: 50rem;
+            margin: 2rem auto;
+        }
+    }
+    &__empty {
+        color: $wine-red;
+        font-size: 1.25rem;
+        margin: 1rem auto;
+        text-align: center;
+        
+        @include desktop {
+            font-size: 1.5rem;
+            max-width: 50rem;
+            margin: 2rem auto;
+        }
+    }
+
+}

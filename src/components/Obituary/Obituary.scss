@@ -1,0 +1,49 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+
+.obituary {
+    background-color: white;
+    max-width: 50rem;
+    padding: 1rem;
+    @include desktop {
+        padding: 2rem;
+    }
+    &__border {
+        border: 1rem solid;
+        border-image-source: url('../../assets/obituary-frame.svg');
+        border-image-slice: 30;
+        @include desktop {
+            border-image-width: 2rem;
+            padding: 2rem;
+            border-image-slice: 20;
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        @include desktop {
+            margin-bottom: 3rem;
+        }
+    }
+    &__info {
+        text-align: center;
+    }
+    &__cross {
+        width: 4rem;
+        @include desktop {
+            width: 6rem;
+        }
+    }
+    &__image{
+        max-width: 10rem;
+    }
+    &__content{
+        width: 100%;
+        text-align: center;
+    }
+}

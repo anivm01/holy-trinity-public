@@ -1,0 +1,53 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+
+.news-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: $wine-red;
+    background-color: $golden;
+    padding: 1rem;
+    @include tablet {
+        padding: 2.5rem;
+    }
+    @include desktop {
+        max-width: 50rem;
+        margin: 0 auto;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    &__image {
+        max-width: 15rem;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__content {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        @include tablet {
+            -webkit-line-clamp: 6;
+        }
+        @include desktop {
+            -webkit-line-clamp: 10;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        align-self: flex-end;
+        color: $wine-red;
+        &::after{
+            content: " >>";
+        }
+        &:hover {
+            scale: 1.1;
+        }
+        &:active {
+            scale: .9;
+        }
+    }
+}

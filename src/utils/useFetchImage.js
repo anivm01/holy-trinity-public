@@ -11,10 +11,6 @@ export default function useFetch(url) {
       try {
         setLoading(true);
         const response = await axios.get(url);
-        if(Array.isArray(response.data)){
-          setData(response.data)
-          return
-        }
         setData(response.data);
       } catch (err) {
         setError(err);
