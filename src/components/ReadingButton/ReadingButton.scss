@@ -1,0 +1,31 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.reading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 1rem;
+    background: transparent;
+    border: none;
+
+    &:hover {
+        scale: 1.1;
+        cursor: pointer;
+    }
+
+    &:active {
+        scale: .9;
+    }
+
+    &__book {
+        width: 3rem;
+    }
+
+    &__title {
+        font-size: 1.1rem;
+    }
+}

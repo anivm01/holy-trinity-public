@@ -1,0 +1,51 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+.worship-office-item {
+    text-decoration: none;
+    color: $wine-red;
+    border: 1px solid $wine-red;
+    &:hover {
+        scale: 1.1;
+    }
+
+    &__title {
+        width: 100%;
+        background-color: $golden;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    &__date {
+        width: 100%;
+        background-color: $wine-red;
+        color: $beige;
+        padding: 0 1rem;
+        text-align: end;
+        font-size: 1rem;
+    }
+    &__image {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            opacity: .8;
+        }
+        
+    }
+    &__icon {
+        position: absolute;
+        width: 3rem;
+        &:hover {
+            scale: 1.1;
+        }
+        &:active {
+            scale: .9;
+        }
+    }
+}

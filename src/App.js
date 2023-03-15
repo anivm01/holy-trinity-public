@@ -7,6 +7,8 @@ import CommunityNewsPage from "./pages/CommunityNewsPage/CommunityNewsPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import HomePage from "./pages/HomePage/HomePage";
 import InMemoriamPage from "./pages/InMemoriamPage/InMemoriamPage";
+import WorshipOfficesPage from "./pages/WorshipOfficesPage/WorshipOfficesPage";
+import WorshipOfficeSingle from './components/WorshipOfficeSingle/WorshipOfficeSingle'
 import { LanguageProvider } from "./utils/LanguageContext";
 
 function App() {
@@ -22,7 +24,8 @@ function App() {
           <Route path="/community-news" element={<CommunityNewsPage />} />
           <Route path="/community-news/:id" element={<CommunityNewsFull />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/worship-offices" />
+          <Route path="/worship-offices" element={<WorshipOfficesPage/>} />
+          <Route path="/worship-offices/:id" element={<WorshipOfficeSingle/>} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

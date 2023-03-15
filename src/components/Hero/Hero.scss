@@ -8,11 +8,8 @@
     flex-direction: column;
     align-items: center;
     @include desktop {
-        background-image: url("../../assets/accent.svg");
-        background-size: 100vw;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-blend-mode: luminosity;
+        background-image: url("../../assets/sunset-background.jpg");
+        background-size: cover;
         background-attachment: fixed;
     }
     &__image{

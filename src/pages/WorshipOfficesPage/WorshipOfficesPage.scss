@@ -1,0 +1,16 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+.worship-offices-page {
+    padding: 1rem;
+    &__title {
+        text-align: center;
+        color: $wine-red;
+        font-size: 1.25rem;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+        @include desktop {
+            font-size: 2rem;
+        }
+    }
+}
