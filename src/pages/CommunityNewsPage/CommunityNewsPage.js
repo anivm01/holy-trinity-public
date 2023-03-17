@@ -9,6 +9,7 @@ import CommunityNewsList from "../../components/CommunityNewsList/CommunityNewsL
 
 function CommunityNewsPage() {
   const language = useLanguage();
+  const currentDate = Math.floor(Date.now()/1000)
 
     return (
       <main>
@@ -17,7 +18,7 @@ function CommunityNewsPage() {
         ) : (
           <Hero image={communityHeroImage} title={"Community News"} />
         )}
-        <CommunityNewsList url={`${API_URL}/published/${language}/articles`} />
+        <CommunityNewsList url={`${API_URL}/published/${language}/articles/past/${currentDate}`} />
       </main>
     );
 

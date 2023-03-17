@@ -2,7 +2,6 @@ import React from 'react'
 import { ThreeDots } from 'react-loader-spinner'
 import { API_URL } from '../../utils/api'
 import useFetchImage from '../../utils/useFetchImage'
-import placeholder from "../../assets/placeholder.svg";
 
 function Image({url}) {
     
@@ -24,7 +23,7 @@ function Image({url}) {
   }
 
   if (error) {
-    <img className='image' src={placeholder} alt="placeholder" />;
+    return false;
   }
 
   if (data) {
@@ -32,7 +31,7 @@ function Image({url}) {
       <img className='image' src={`${API_URL}${data.url}`} alt={data.description}/>
       )
   }
-  return <img className='image' src={placeholder} alt="placeholder" />;
+  return false;
 }
 
 export default Image

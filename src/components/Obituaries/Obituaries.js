@@ -1,19 +1,45 @@
-import React from 'react'
-import Obituary from '../Obituary/Obituary';
-import "./Obituaries.scss"
+import React, { useState } from "react";
+import Obituary from "../Obituary/Obituary";
+import "./Obituaries.scss";
 import { createMarkup } from "../../utils/createMarkup";
-import { removeFuture } from '../../utils/limitData';
-import { useLanguage } from '../../utils/LanguageContext';
+import { useLanguage } from "../../utils/LanguageContext";
+import { ThreeDots } from "react-loader-spinner";
+import NoData from "../NoData/NoData";
+import useFetch from "../../utils/useFetchImage";
+import PaginationContainer from "../PaginationContainer/PaginationContainer";
 
-function Obituaries({data}) {
-  const language = useLanguage()
-  if(!data) {
-    return <p>Loading...</p>
+
+function Obituaries({ url }) {
+  const language = useLanguage();
+  const { data, loading, error } = useFetch(url);
+  const [dataPerPage, setDataPerPage] = useState([]);
+
+
+  if (loading) {
+    <ThreeDots
+      height="80"
+      width="80"
+      radius="9"
+      color="#6F0B20"
+      ariaLabel="three-dots-loading"
+      wrapperStyle={{ justifyContent: "center" }}
+      wrapperClassName=""
+      visible={true}
+    />;
   }
-  const latestData = removeFuture(data)
+  if (error) {
+    return <NoData />;
+
+  }
+  if (data) {
     return (
+      <PaginationContainer
+      data={data}
+      numberOfPostsPerPage={10}
+      setDataPerPage={setDataPerPage}
+    >
       <section className="events">
-        {latestData.map((single, index) => {
+        {dataPerPage.map((single, index) => {
           return (
             <Obituary
               key={index}
@@ -25,7 +51,10 @@ function Obituaries({data}) {
           );
         })}
       </section>
+      </PaginationContainer>
     );
+  }
+  return <NoData />;
 }
 
-export default Obituaries
+export default Obituaries;

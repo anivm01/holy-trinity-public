@@ -1,0 +1,28 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+.memorial-quote {
+    background-color: black;
+    max-height: 5rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: $golden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    @include tablet {
+        gap: 3rem;
+    }
+    &__text {
+        font-style: italic;
+        text-align: center;
+        font-size: 1.1rem;
+        @include tablet {
+            font-size: 1.25rem;
+        }
+    }
+}

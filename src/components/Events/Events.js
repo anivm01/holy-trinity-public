@@ -6,9 +6,8 @@ import { dateObjectConverter } from "../../utils/dateConversion";
 import useFetch from "../../utils/useFetchImage";
 import { ThreeDots } from "react-loader-spinner";
 import NoData from "../NoData/NoData";
-import { removeFuture, removePast } from "../../utils/limitData";
 
-function Events({ url, timeline }) {
+function Events({ url }) {
   const { data, loading, error } = useFetch(url);
   if (loading) {
     <ThreeDots
@@ -27,19 +26,13 @@ function Events({ url, timeline }) {
   }
 
   if (data) {
-    const events = (timeline === "upcoming") ? removePast(data) : removeFuture(data)
-    if(events.length === 0) {
-      return (
-        <NoData/>
-      )
-    }
     return (
       <section className="events">
-        {events.map((single, index) => {
+        {data.map((single, index) => {
           return (
             <Event
               key={index}
-              date={dateObjectConverter(single.date)}
+              date={dateObjectConverter(single.event_date)}
               title={single.title}
               details={createMarkup(single.event_details)}
             />

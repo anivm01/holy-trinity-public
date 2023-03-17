@@ -1,7 +1,6 @@
 import React from "react";
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../utils/useFetchImage";
-import placeholder from "../../assets/placeholder.svg";
 import Image from "../Image/Image";
 import { useLanguage } from "../../utils/LanguageContext";
 import { API_URL } from "../../utils/api";
@@ -26,7 +25,7 @@ function ImageDeliverer({url}) {
   }
 
   if (error) {
-    <img className='image' src={placeholder} alt="placeholder" />;
+    return false;
   }
 
   if (data) {
@@ -34,7 +33,7 @@ function ImageDeliverer({url}) {
         <Image url={`${API_URL}/images/${language}/${data.image_id}`} />
     )
   }
-  return <img className='image' src={placeholder} alt="placeholder" />;
+  return false;
 }
 
 export default ImageDeliverer;

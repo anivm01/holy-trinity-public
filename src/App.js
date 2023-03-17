@@ -10,6 +10,7 @@ import InMemoriamPage from "./pages/InMemoriamPage/InMemoriamPage";
 import WorshipOfficesPage from "./pages/WorshipOfficesPage/WorshipOfficesPage";
 import WorshipOfficeSingle from './components/WorshipOfficeSingle/WorshipOfficeSingle'
 import { LanguageProvider } from "./utils/LanguageContext";
+import ObituaryFull from "./components/ObituaryFull/ObituaryFull";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<AboutPage />}/>
           <Route path="/contact-us"  />
           <Route path="/in-memoriam" element={<InMemoriamPage />} />
+          <Route path="/in-memoriam/:id" element={<ObituaryFull />} />
           <Route path="/community-news" element={<CommunityNewsPage />} />
           <Route path="/community-news/:id" element={<CommunityNewsFull />} />
           <Route path="/events" element={<EventsPage />} />

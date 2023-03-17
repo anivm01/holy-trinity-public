@@ -10,6 +10,7 @@ import { API_URL } from "../../utils/api";
 
 function EventsPage() {
   const language = useLanguage();
+  const currentDate = Math.floor(Date.now()/1000)
   return (
     <main className="events-page">
       {language === "bg" ? (
@@ -30,7 +31,7 @@ function EventsPage() {
           <h3 className="events-page__heading">Upcoming Events</h3>
         )}
         <Events
-          url={`${API_URL}/published/${language}/events/`}
+          url={`${API_URL}/published/${language}/events/upcoming/${currentDate}`}
           timeline={"upcoming"}
         />
       </section>
@@ -41,7 +42,7 @@ function EventsPage() {
           <h3 className="events-page__heading">Recent Events</h3>
         )}
         <Events
-          url={`${API_URL}/published/${language}/events/`}
+          url={`${API_URL}/published/${language}/events/past/${currentDate}`}
           timeline={"past"}
         />
       </section>

@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
-import { removeFuture } from "../../utils/limitData";
 import useFetch from "../../utils/useFetchImage";
 import NoData from "../NoData/NoData";
+import PaginationContainer from "../PaginationContainer/PaginationContainer";
 import WorshipOfficeItem from "../WorshipOfficeItem/WorshipOfficeItem";
 import "./WorshipOfficesList.scss";
 
 function WorshipOfficesList({ url }) {
   const { data, loading, error } = useFetch(url);
+  const [dataPerPage, setDataPerPage] = useState([]);
+
 
   if (loading) {
     return (
@@ -29,15 +31,20 @@ function WorshipOfficesList({ url }) {
     )
   }
   if(data){
-    const videos = removeFuture(data)
     return (
+      <PaginationContainer
+          data={data}
+          numberOfPostsPerPage={17}
+          setDataPerPage={setDataPerPage}
+        >
         <section className="worship-offices-list">
-            {videos.map((single, index)=> {
+            {dataPerPage.map((single, index)=> {
                 return (
                     <WorshipOfficeItem key={index} item={single}/>
                 )
             })}
         </section>
+        </PaginationContainer>
     )
   }
 

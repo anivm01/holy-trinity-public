@@ -1,23 +1,30 @@
 @use "../../partials/colors" as*;
 @use "../../partials/breakpoints"as*;
 
-.obituary {
+.obituary-full {
     background-color: white;
     width: 100%;
-    max-width: 50rem;
+    
     padding: 1rem;
     @include tablet {
         padding: 1.5rem;
     }
     @include desktop {
         padding: 2rem;
+        max-width: 50rem;
+        margin: 2rem auto;
+    }
+    &__container {
+        min-height: 100vh;
+        position: relative;
+        @include desktop {
+            min-height: calc(100vh - 143.38px);
+        }
     }
     &__border {
         border: 1rem solid;
         border-image-source: url('../../assets/obituary-frame.svg');
         border-image-slice: 30;
-        display: flex;
-        flex-direction: column;
         @include desktop {
             border-image-width: 2rem;
             padding: 2rem;
@@ -30,7 +37,6 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 1rem;
-        
         padding: 1rem;
         @include desktop {
             
@@ -54,23 +60,8 @@
         width: 100%;
         text-align: center;
         padding-top: 1rem;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
         @include desktop {
             padding-top: 3rem;
-        }
-    }
-    &__continue {
-        text-decoration: none;
-        padding-top: 1rem;
-        color: $wine-red;
-        text-align: end;
-        align-self: flex-end;
-        cursor: pointer;
-        &::after {
-            content: " >>";
         }
     }
 }
