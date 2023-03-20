@@ -18,7 +18,7 @@ function Pagination({
     pageNumbers.push(i);
   }
   if (pageNumbers.length === 1) {
-    return
+    return;
   }
   if (pageNumbers.length > 5) {
     if (
@@ -59,13 +59,12 @@ function Pagination({
             onClick={() => paginate(number)}
             className={`pagination__number ${
               currentPage === number ? "pagination__number--active" : ""
-            }  ${
-                (number === 2 && currentPage !== 3)
-                  ? "pagination__number--dots-after"
-                  : ""
-              }           
-            ${
-              (number >= 3 && number <= numberOfPages - 3)
+            } ${
+              number === 2 && currentPage !== 3 && numberOfPages > 5
+                ? "pagination__number--dots-after"
+                : ""
+            } ${
+              number >= 3 && number <= numberOfPages - 3
                 ? "pagination__number--dots-after"
                 : ""
             } `}

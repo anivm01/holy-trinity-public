@@ -38,7 +38,7 @@ function CommunityNewsList({ url }) {
       <section>
         <PaginationContainer
           data={data}
-          numberOfPostsPerPage={5}
+          numberOfPostsPerPage={1}
           setDataPerPage={setDataPerPage}
         >
           <div className="community-news-list">

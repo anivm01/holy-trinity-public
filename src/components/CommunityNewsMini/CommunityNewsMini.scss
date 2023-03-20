@@ -1,0 +1,27 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+
+.news-mini {
+    cursor: pointer;
+    text-decoration: none;
+    color: $wine-red;
+    
+    &__image {
+        background-image: url('../../assets/sunset-background.jpg');
+        width: 10rem;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 1.1rem;
+        width: 10rem;
+        line-height: 1.2;
+        margin: 1rem auto;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+}
