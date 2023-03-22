@@ -25,7 +25,10 @@ function MainNavBg() {
           <NavLink to='/about' className="main-nav__link">За Нас</NavLink>
         </li>
         <li className="main-nav__item">
-          <NavLink to='/contact-us' className="main-nav__link">Контакти</NavLink>
+          <NavLink to='/donations' className="main-nav__link">Дарения</NavLink>
+        </li>
+        <li className="main-nav__item">
+          <NavLink to='/hall' className="main-nav__link">Зала под Наем</NavLink>
         </li>
       </ul>
     </nav>

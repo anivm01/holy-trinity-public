@@ -25,7 +25,10 @@ function MainNav() {
           <NavLink to='/about' className="main-nav__link">About Us</NavLink>
         </li>
         <li className="main-nav__item">
-          <NavLink to='/contact-us' className="main-nav__link">Contact Us</NavLink>
+          <NavLink to='/donations' className="main-nav__link">Donations</NavLink>
+        </li>
+        <li className="main-nav__item">
+          <NavLink to='/hall' className="main-nav__link">Hall for Rent</NavLink>
         </li>
       </ul>
     </nav>

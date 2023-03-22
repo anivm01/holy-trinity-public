@@ -43,7 +43,7 @@ function MobileNavBg() {
             </li>
             <li className="mobile-nav__item">
               <NavLink to="/worship-offices" className="mobile-nav__link">
-              Богослужения
+                Богослужения
               </NavLink>
             </li>
             <li className="mobile-nav__item">
@@ -67,8 +67,13 @@ function MobileNavBg() {
               </NavLink>
             </li>
             <li className="mobile-nav__item">
-              <NavLink to="/contact-us" className="mobile-nav__link">
-                Контакти
+              <NavLink to="/donations" className="mobile-nav__link">
+                Дарения
+              </NavLink>
+            </li>
+            <li className="mobile-nav__item">
+              <NavLink to="/hall" className="mobile-nav__link">
+                Зала под наем
               </NavLink>
             </li>
           </ul>

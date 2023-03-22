@@ -67,8 +67,13 @@ function MobileNav() {
               </NavLink>
             </li>
             <li className="mobile-nav__item">
-              <NavLink to="/contact-us" className="mobile-nav__link">
-                Contact Us
+              <NavLink to="/donations" className="mobile-nav__link">
+                Donations
+              </NavLink>
+            </li>
+            <li className="mobile-nav__item">
+              <NavLink to="/hall" className="mobile-nav__link">
+                Hall for Rent
               </NavLink>
             </li>
           </ul>

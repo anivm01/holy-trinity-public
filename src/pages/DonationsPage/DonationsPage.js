@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../../components/Hero/Hero";
 import HeroBg from "../../components/Hero/HeroBg";
 import { useLanguage } from "../../utils/LanguageContext";
-import donations from "../../assets/donations.jpg";
+import donations from "../../assets/church-inside.jpg";
 import DonationsBg from "../../components/Donations/DonationsBg";
 import Donations from "../../components/Donations/Donations";
 

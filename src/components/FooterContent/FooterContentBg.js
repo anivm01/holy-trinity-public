@@ -78,7 +78,7 @@ function FooterContentBg() {
         </Link>
         <h3>Зала под наем</h3>
         <p>Църковната зала се дава под наем</p>
-        <a className="footer__link">Научете повече</a>
+        <Link to="/hall" className="footer__link">Научете повече</Link>
       </div>
     </div>
   );
