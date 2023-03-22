@@ -3,7 +3,7 @@ import Hero from "../../components/Hero/Hero";
 import HeroBg from "../../components/Hero/HeroBg";
 import { API_URL } from "../../utils/api";
 import { useLanguage } from "../../utils/LanguageContext";
-import communityHeroImage from "../../assets/iconostas.jpg";
+import communityHeroImage from "../../assets/church-doors.jpg";
 import "./CommunityNewsPage.scss";
 import CommunityNewsList from "../../components/CommunityNewsList/CommunityNewsList";
 

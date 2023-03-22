@@ -11,6 +11,8 @@ import WorshipOfficesPage from "./pages/WorshipOfficesPage/WorshipOfficesPage";
 import WorshipOfficeSingle from './components/WorshipOfficeSingle/WorshipOfficeSingle'
 import { LanguageProvider } from "./utils/LanguageContext";
 import ObituaryFull from "./components/ObituaryFull/ObituaryFull";
+import Footer from "./components/Footer/Footer";
+import DonationsPage from "./pages/DonationsPage/DonationsPage";
 
 function App() {
   return (
@@ -28,7 +30,9 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/worship-offices" element={<WorshipOfficesPage/>} />
           <Route path="/worship-offices/:id" element={<WorshipOfficeSingle/>} />
+          <Route path="/donations" element={<DonationsPage/>} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </LanguageProvider>
   );

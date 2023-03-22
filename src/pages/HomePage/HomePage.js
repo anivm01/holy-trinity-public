@@ -8,6 +8,7 @@ import WeeklyAnnouncement from "../../components/WeeklyAnnouncement/WeeklyAnnoun
 import { API_URL } from "../../utils/api";
 import NextEvent from "../../components/NextEvent/NextEvent";
 import LatestNews from "../../components/LatestNews/LatestNews";
+import LatestWorshipOffice from "../../components/LatestWorshipOffice/LatestWorshipOffice";
 
 function HomePage() {
   const language = useLanguage();
@@ -29,6 +30,14 @@ function HomePage() {
       </section>
       <section className="home__section">
         {language === "bg" ? (
+          <h2 className="home__heading">Присъединете се към общественото богослужение</h2>
+        ) : (
+          <h2 className="home__heading">Join in our public worship office</h2>
+        )}
+        <LatestWorshipOffice url={`${API_URL}/published/${language}/worship-offices/latest/${currentDate}`} />
+      </section>
+      <section className="home__section">
+        {language === "bg" ? (
           <h2 className="home__heading">Предстоящо Събитие</h2>
         ) : (
           <h2 className="home__heading">Upcoming Event</h2>
@@ -43,6 +52,7 @@ function HomePage() {
         )}
         <LatestNews url={`${API_URL}/published/${language}/articles/latest/${currentDate}`}/>
       </section>
+      
     </main>
   );
 }

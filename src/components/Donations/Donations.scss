@@ -1,0 +1,39 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.donations {
+    width: 100%;
+    max-width: 50rem;
+    padding: 1rem;
+    margin: 0 auto;    
+
+    &__text {
+        margin: 1rem auto;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.1rem;
+    }
+
+    &__heading {
+        max-width: 55ch;
+        margin: 1rem auto .5rem auto;
+    }
+
+    &__list {
+        max-width: 55ch;
+        margin: 0 auto;
+    }
+
+    &__address {
+        max-width: 55ch;
+        margin: 0 auto;
+    }
+
+    &__position {
+        font-style: italic;
+    }
+
+    &__phone {
+        color: $wine-red;
+    }
+}
