@@ -1,13 +1,22 @@
-body {
+@use "./partials/colors"as*;
+@use "./partials/global"as*;
+
+*, *::after, *::before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'El Messiri', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $beige;
+}
+
+input, textarea, span, button {
+  font-family: 'El Messiri', sans-serif;
+}
+
+button {
+  cursor: pointer;
 }

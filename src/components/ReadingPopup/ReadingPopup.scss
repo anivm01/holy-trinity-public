@@ -1,0 +1,63 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.reading-popup {
+    background-image: url("../../assets/old-paper.jpg");
+    background-size: cover;
+    height: 40vh;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    overflow: scroll;
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px $golden; 
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px $wine-red; 
+        }
+        &:focus-within {
+            outline: 2px solid $wine-red;
+        }
+    @include desktop {
+        width: 65rem;
+        margin: 0 auto;
+        bottom: 0;
+        left: 10%;
+        right: 10%;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: transparent;
+        border: none;
+    }
+    &__icon {
+        width: 1rem;
+        cursor: pointer;
+        &:hover {
+            scale: 1.1;
+        }
+        &:active {
+            scale: .9;
+        }
+    }
+
+    &__content {
+        max-width: 75ch;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+}

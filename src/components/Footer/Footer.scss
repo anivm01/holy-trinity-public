@@ -1,0 +1,71 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.footer {
+    padding: 1rem;
+    width: 100%;
+    background-color: $wine-red;
+    color: $beige;
+    border-top: 4px solid $golden;
+
+    &__container {
+        width: 100%;
+        max-width: 70rem;
+        margin: 0 auto;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &__email {
+        color: $golden;
+        margin-left: .5rem;
+    }
+
+    &__text {
+        max-width: 25ch;
+    }
+
+    &__position {
+        font-style: italic;
+        color: $golden;
+        margin-top: .5rem;
+    }
+
+    &__name {
+        margin-left: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        color: $wine-red;
+        background-color: $golden;
+        padding: .5rem .75rem;
+        margin: 1rem 0;
+    }
+
+    &__map {
+        border: none;
+        margin: 1rem 0;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__icon {
+        height: 1.75rem;
+    }
+
+}

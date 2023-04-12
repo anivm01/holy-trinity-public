@@ -1,0 +1,30 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+
+.event {
+    border: 4px solid $wine-red;
+    border-left: none;
+    border-right: none;
+    background-color: $beige;
+    @include desktop {
+        // border-left: 1px solid $wine-red;
+        // border-right: 1px solid $wine-red;
+        max-width: 50rem;
+        margin: 1rem auto;
+    }
+    &__header {
+        background-color: $wine-red;
+        color: $beige;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    &__date {
+        font-size: 1.5rem;
+    }
+    &__main {
+        padding: 1rem;
+        text-align: center;
+        color: $wine-red;
+    }
+}

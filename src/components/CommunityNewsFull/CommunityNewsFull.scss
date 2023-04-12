@@ -1,0 +1,45 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+.community-news-full {
+    background-color: $golden;
+    padding: 1.5rem;
+    @include tablet {
+        padding: 2rem;
+    }
+    &__background {
+        padding: 1.5rem;
+        background-color: $beige;
+        color: $wine-red;
+        max-width: 50rem;
+        margin: 0 auto;
+        @include tablet {
+            padding: 2rem;
+        }
+        @include desktop {
+            padding: 2.5rem;
+        }
+    }
+    &__title {
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: 700;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+        @include desktop {
+            font-size: 1.75rem;
+        }
+    }
+    &__author {
+        text-align: end;
+        max-width: 37.5rem;
+        margin: 0 auto;
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+    &__image {
+        max-width: 37.5rem;
+        margin: 1rem auto;
+    }
+}

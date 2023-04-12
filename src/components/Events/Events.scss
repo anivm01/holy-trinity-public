@@ -1,0 +1,13 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    @include desktop {
+        gap: 2rem;
+    }
+}

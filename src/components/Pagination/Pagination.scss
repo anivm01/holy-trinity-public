@@ -1,0 +1,99 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.pagination {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+
+    &__list {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        list-style: none;
+
+        @include tablet {
+            gap: 1.5rem;
+        }
+
+        @include desktop {
+            gap: 2rem;
+        }
+    }
+
+    &__number {
+        padding: 0;
+        text-align: center;
+        width: 1.5rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $golden;
+        border-radius: 50%;
+        color: $wine-red;
+        font-size: .7rem;
+
+        @include tablet {
+            font-size: 1rem;
+            width: 2.5rem;
+            height: 2rem;
+        }
+
+        @include desktop {
+            font-size: 1.25rem;
+
+        }
+
+        &:hover {
+            background-color: $wine-red;
+            color: $beige;
+        }
+
+        &--active {
+            background-color: $wine-red;
+            color: $beige;
+        }
+        &.pagination__number--dots-after {
+            padding-left: .5rem;
+
+            @include tablet {
+                padding-left: 1.2rem;
+                margin-right: 1rem;
+            }
+
+            &::after {
+                content: "...";
+                transform: translateX(.8rem);
+                font-size: .7rem;
+                color: $wine-red;
+
+                @include tablet {
+                    transform: translateX(1.5rem);
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        height: 1.25rem;
+        width: 1.25rem;
+        cursor: pointer;
+
+        @include tablet {
+            height: 2rem;
+            width: 2rem;
+        }
+
+        &:hover {
+            background-color: $golden;
+            border-radius: 50%;
+        }
+
+    }
+}

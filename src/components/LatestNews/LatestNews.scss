@@ -1,0 +1,7 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+.latest-news {
+    width: 100%;
+    max-width: 50rem;
+    margin: 1rem auto;
+}

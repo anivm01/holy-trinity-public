@@ -1,0 +1,116 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.worship-office-single {
+    width: 100%;
+    background-color: $golden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 74px);
+
+    @include tablet {
+        min-height: calc(100vh - 95.25px);
+    }
+
+    @include desktop {
+        min-height: calc(100vh - 143px);
+    }
+
+    &__hero {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        background-image: url("../../assets/sunset-background.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+
+        align-items: center;
+        opacity: .9;
+    }
+
+    &__video {
+        aspect-ratio: 16/9;
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+
+        @include desktop {
+            max-width: 65rem;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        background-color: $wine-red;
+        @include desktop {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        color: $wine-red;
+        background-color: $beige;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.25rem;
+        @include desktop {
+            background-color: $golden;
+        }
+    }
+
+    &__subtitle {
+        padding: .5rem 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: $golden;
+        font-style: italic;
+        width: 100%;
+        background-color: $wine-red;
+        @include desktop {
+            width: auto;
+        }
+    }
+
+    &__readings {
+        padding: 0 0 1rem 0;
+        width: 100%;
+        background-color: $beige;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        @include desktop {
+            background-color: $wine-red;
+            padding: 1rem 0;
+        }
+        & .reading__title {
+            color: $wine-red;
+            @include desktop {
+                color: $golden;
+            }
+        }
+    }
+
+    &__prayers {
+        padding: 1rem 0;
+        width: 100%;
+        background-color: $wine-red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        & .reading__title {
+            color: $golden;
+        }
+    }
+}

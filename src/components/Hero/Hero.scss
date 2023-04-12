@@ -1,0 +1,39 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+
+.hero {
+    width: 100%;
+    background-color: $golden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+        background-image: url("../../assets/sunset-background.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    &__image{
+        width: 100%;
+        aspect-ratio: 16/9;
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+    &__title {
+        font-size: .9rem;
+        text-transform: uppercase;
+        color: $beige;
+        text-align: center;
+        margin: 0 1rem;
+        width: 100%;
+        background-color: $wine-red;
+        @include tablet {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+        }
+        @include tiny-mobile {
+            font-size: .8rem;
+        }
+    }
+}

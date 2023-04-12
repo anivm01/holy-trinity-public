@@ -1,0 +1,21 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints"as*;
+.no-data {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 50rem;
+    margin: 1rem auto;
+    &__image {
+        opacity: .5;
+        width: 12.5rem;
+        margin: 1.5rem auto;
+    }
+    &__text{
+        color: $wine-red;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+    }
+}

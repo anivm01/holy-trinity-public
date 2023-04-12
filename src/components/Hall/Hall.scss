@@ -1,0 +1,44 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.hall {
+    width: 100%;
+    max-width: 50rem;
+    padding: 1rem;
+    margin: 0 auto; 
+    color: $wine-red;
+    &__text {
+        margin: 1rem auto;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    &__heading {
+        max-width: 55ch;
+        margin: 1rem auto .5rem auto;
+    }
+
+    &__list {
+        max-width: 55ch;
+        margin: 0 auto;
+    }
+    &__item {
+        max-width: 55ch;
+        margin: 0 auto;
+    }
+    &__contact {
+        color: $wine-red;
+        font-weight: 900;
+        padding: .1rem .5rem;
+        text-decoration: none;
+    }
+    &__name {
+font-size: 1.1rem;
+font-style: italic;
+font-weight: 600;
+    }
+
+
+}
