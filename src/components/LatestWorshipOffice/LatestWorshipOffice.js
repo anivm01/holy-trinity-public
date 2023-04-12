@@ -1,17 +1,14 @@
 import React from "react";
 import { ThreeDots } from "react-loader-spinner";
 import { Link } from "react-router-dom";
-import { API_URL } from "../../utils/api";
 import { dateObjectConverter } from "../../utils/dateConversion";
-import { useLanguage } from "../../utils/LanguageContext";
 import useFetch from "../../utils/useFetchImage";
-import ImageDeliverer from "../ImageDeliverer/ImageDeliverer";
 import NoData from "../NoData/NoData";
 import imageIcon from "../../assets/video-icon.svg";
-import './LatestWorshipOffice.scss'
+import placeholder from "../../assets/sunset-background.jpg";
+import "./LatestWorshipOffice.scss";
 
 function LatestWorshipOffice({ url }) {
-  const language = useLanguage();
   const { data, loading, error } = useFetch(url);
 
   if (loading) {
@@ -32,7 +29,7 @@ function LatestWorshipOffice({ url }) {
     return <NoData />;
   }
   if (data) {
-    const date = dateObjectConverter(data.date)
+    const date = dateObjectConverter(data.date);
     return (
       <div>
         <Link
@@ -40,9 +37,15 @@ function LatestWorshipOffice({ url }) {
           className="worship-office-latest"
         >
           <div className="worship-office-latest__image">
-            <ImageDeliverer
-              url={`${API_URL}/thumbnail/${language}/${data.id}`}
-            />
+            {data.src ? (
+              <img className="image" src={data.src} alt={data.description} />
+            ) : (
+              <img
+                src={placeholder}
+                alt="thumbnail placeholder"
+                className="image"
+              />
+            )}
             <img
               className="worship-office-latest__icon"
               src={imageIcon}

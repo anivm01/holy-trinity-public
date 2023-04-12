@@ -2,19 +2,11 @@
 @use "../../partials/breakpoints" as*;
 
 .footer {
-    margin-top: 1rem;
     padding: 1rem;
     width: 100%;
     background-color: $wine-red;
     color: $beige;
-
-    @include tablet {
-        margin-top: 1.5rem;
-    }
-
-    @include desktop {
-        margin-top: 2rem;
-    }
+    border-top: 4px solid $golden;
 
     &__container {
         width: 100%;

@@ -8,12 +8,9 @@ import NoData from "../NoData/NoData";
 import useFetch from "../../utils/useFetchImage";
 import PaginationContainer from "../PaginationContainer/PaginationContainer";
 
-
 function Obituaries({ url }) {
-  const language = useLanguage();
   const { data, loading, error } = useFetch(url);
   const [dataPerPage, setDataPerPage] = useState([]);
-
 
   if (loading) {
     <ThreeDots
@@ -29,28 +26,19 @@ function Obituaries({ url }) {
   }
   if (error) {
     return <NoData />;
-
   }
   if (data) {
     return (
       <PaginationContainer
-      data={data}
-      numberOfPostsPerPage={10}
-      setDataPerPage={setDataPerPage}
-    >
-      <section className="events">
-        {dataPerPage.map((single, index) => {
-          return (
-            <Obituary
-              key={index}
-              name={single.name}
-              years={single.years}
-              id={language === "bg" ? single.en_id : single.id}
-              obituary={createMarkup(single.obituary)}
-            />
-          );
-        })}
-      </section>
+        data={data}
+        numberOfPostsPerPage={10}
+        setDataPerPage={setDataPerPage}
+      >
+        <section className="obituaries">
+          {dataPerPage.map((single, index) => {
+            return <Obituary key={index} item={single} />;
+          })}
+        </section>
       </PaginationContainer>
     );
   }

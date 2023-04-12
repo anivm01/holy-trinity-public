@@ -2,17 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { API_URL } from "../../utils/api";
 import { useLanguage } from "../../utils/LanguageContext";
+import Image from "../Image/Image";
 import ImageDeliverer from "../ImageDeliverer/ImageDeliverer";
 import "./CommunityNewsMini.scss";
 
-function CommunityNewsMini({ title, id }) {
+function CommunityNewsMini({ item }) {
   const language = useLanguage();
   return (
-    <Link to={`/community-news/${id}`} className="news-mini">
+    <Link to={`/community-news/${item.id}`} className="news-mini">
       <div className="news-mini__image">
-        <ImageDeliverer url={`${API_URL}/featured-image/${language}/${id}`} />
+        {item.src && <img className="image" src={item.src} alt={item.description} />}
       </div>
-        <h3 className="news-mini__title">{title}</h3>
+        <h3 className="news-mini__title">{item.title}</h3>
     </Link>
   );
 }

@@ -36,6 +36,8 @@ function WorshipOfficeSingle() {
   }
   if (data) {
     const oldTestament = createMarkup(data.old_testament);
+    const epistle = createMarkup(data.epistle);
+    const gospel = createMarkup(data.gospel);
     return (
       <article className="worship-office-single">
         <div className="worship-office-single__hero">
@@ -55,14 +57,18 @@ function WorshipOfficeSingle() {
             ) : (
               <h3 className="worship-office-single__subtitle">Readings</h3>
             )}
-            <ReadingButton
-              content={createMarkup(data.gospel)}
-              title={language === "bg" ? "Евангелие" : "Gospel"}
-            />
-            <ReadingButton
-              content={createMarkup(data.epistle)}
-              title={language === "bg" ? "Апостол" : "Epistle"}
-            />
+            {gospel.__html.length > 8 && (
+              <ReadingButton
+                content={gospel}
+                title={language === "bg" ? "Евангелие" : "Gospel"}
+              />
+            )}
+            {epistle.__html.length > 8 && (
+              <ReadingButton
+                content={epistle}
+                title={language === "bg" ? "Апостол" : "Epistle"}
+              />
+            )}
             {oldTestament.__html.length > 8 && (
               <ReadingButton
                 content={oldTestament}

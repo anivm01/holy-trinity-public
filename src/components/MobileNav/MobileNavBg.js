@@ -43,7 +43,7 @@ function MobileNavBg() {
             </li>
             <li className="mobile-nav__item">
               <NavLink to="/worship-offices" className="mobile-nav__link">
-                Богослужения
+                Предавания на Живо
               </NavLink>
             </li>
             <li className="mobile-nav__item">

@@ -1,7 +1,6 @@
 import Carousel from "better-react-carousel";
 import React, { useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
-import { createMarkup } from "../../utils/createMarkup";
 import { useLanguage } from "../../utils/LanguageContext";
 import useFetch from "../../utils/useFetchImage";
 import CommunityNewsMini from "../CommunityNewsMini/CommunityNewsMini";
@@ -10,7 +9,6 @@ import NoData from "../NoData/NoData";
 import "./LatestNews.scss";
 
 function LatestNews({ url }) {
-  const language = useLanguage();
   const { data, loading, error } = useFetch(url);
   
     if (loading) {
@@ -38,8 +36,7 @@ function LatestNews({ url }) {
               return (
                 <Carousel.Item key={index}>
                   <CommunityNewsMini
-                    title={single.title}
-                    id={language === "bg" ? single.en_id : single.id}
+                    item={single}
                   />
                 </Carousel.Item>
               );

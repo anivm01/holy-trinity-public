@@ -1,7 +1,6 @@
 import React from "react";
 import "./ObituaryFull.scss";
 import cross from "../../assets/cross.svg";
-import ImageDeliverer from "../ImageDeliverer/ImageDeliverer";
 import { API_URL } from "../../utils/api";
 import { useLanguage } from "../../utils/LanguageContext";
 import { Link, useParams } from "react-router-dom";
@@ -34,6 +33,9 @@ function ObituaryFull() {
     return <NoData />;
   }
   if (data) {
+    if(data.name === "") {
+      return <NoData />
+    }
     return (
       <div className="obituary-full__container">
       <article className="obituary-full">
@@ -45,7 +47,7 @@ function ObituaryFull() {
               <h4 className="obituary-full__years">{data.years}</h4>
             </div>
             <div className="obituary-full__image">
-              <ImageDeliverer url={`${API_URL}/deceased/${language}/${data.id}`} />
+              <img src={data.src} alt={data.description} className="image" />
             </div>
           </div>
           <div

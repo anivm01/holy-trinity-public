@@ -8,6 +8,7 @@ import useFetch from '../../utils/useFetch'
 import ImageDeliverer from '../ImageDeliverer/ImageDeliverer'
 import NoData from '../NoData/NoData'
 import { createMarkup } from '../../utils/createMarkup'
+import Image from '../Image/Image'
 
 function CommunityNewsFull() {
     const params = useParams()
@@ -32,15 +33,20 @@ function CommunityNewsFull() {
       return <NoData />;
     }
     if(data) {
+      const content = createMarkup(data.content)
+      if(data.title === "" || content.__html.length <8) {
+        return <NoData />
+      }
       return (
         <article className='community-news-full'>
           <div className='community-news-full__background'>
             <h3 className='community-news-full__title'>{data.title}</h3>
-            <h4 className='community-news-full__author'>Written by {data.author}</h4>
+            {data.author && <h4 className='community-news-full__author'>
+              {language === "bg" ? "Автор:" : "Written by:"} {data.author}</h4> }
             <div className='community-news-full__image'>
-              <ImageDeliverer url={`${API_URL}/featured-image/${language}/${data.id}`} />
+              <img className='image' src={data.src} alt={data.description} />
             </div>
-            <div className='community-news-full__content' dangerouslySetInnerHTML={createMarkup(data.content)}></div>
+            <div className='community-news-full__content' dangerouslySetInnerHTML={content}></div>
           </div>
         </article>
       )

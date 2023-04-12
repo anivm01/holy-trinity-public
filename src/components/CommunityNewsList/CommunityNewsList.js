@@ -6,7 +6,6 @@ import NoData from "../NoData/NoData";
 import { useLanguage } from "../../utils/LanguageContext";
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../utils/useFetch";
-import Pagination from "../Pagination/Pagination";
 import PaginationContainer from "../PaginationContainer/PaginationContainer";
 
 function CommunityNewsList({ url }) {
@@ -34,6 +33,7 @@ function CommunityNewsList({ url }) {
   }
 
   if (data) {
+    console.log(data)
     return (
       <section>
         <PaginationContainer
@@ -46,10 +46,7 @@ function CommunityNewsList({ url }) {
               return (
                 <CommunityNewsPreview
                   key={index}
-                  title={single.title}
-                  content={createMarkup(single.content)}
-                  author={single.author}
-                  id={language === "bg" ? single.en_id : single.id}
+                  item={single}
                 />
               );
             })}

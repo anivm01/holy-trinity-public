@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useLanguage } from "../../utils/LanguageContext";
 import Pagination from "../Pagination/Pagination";
 
 function PaginationContainer({ data, children, numberOfPostsPerPage, setDataPerPage }) {
+  const language = useLanguage()
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(numberOfPostsPerPage);
 
@@ -9,9 +11,8 @@ function PaginationContainer({ data, children, numberOfPostsPerPage, setDataPerP
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const changeCurrentPosts = (data) => data.slice(indexOfFirstPost, indexOfLastPost)
 
-  useEffect(()=>{ setDataPerPage(changeCurrentPosts(data)) }, [indexOfFirstPost, indexOfLastPost])
+  useEffect(()=>{ setDataPerPage(changeCurrentPosts(data)) }, [data, indexOfFirstPost, indexOfLastPost, language])
 
-  
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);

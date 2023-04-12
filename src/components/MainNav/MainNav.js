@@ -10,7 +10,7 @@ function MainNav() {
           <NavLink to="/" className="main-nav__link">Home</NavLink>
         </li>
         <li className="main-nav__item">
-          <NavLink to="/worship-offices" className="main-nav__link">Worship Offices</NavLink>
+          <NavLink to="/worship-offices" className="main-nav__link">Broadcasts</NavLink>
         </li>
         <li className="main-nav__item">
           <NavLink to='/events' className="main-nav__link">Events</NavLink>

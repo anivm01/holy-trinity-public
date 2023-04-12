@@ -1,6 +1,5 @@
 import React from 'react'
 import { ThreeDots } from 'react-loader-spinner'
-import { API_URL } from '../../utils/api'
 import useFetchImage from '../../utils/useFetchImage'
 
 function Image({url}) {
@@ -28,9 +27,10 @@ function Image({url}) {
 
   if (data) {
     return (
-      <img className='image' src={`${API_URL}${data.url}`} alt={data.description}/>
+      <img className='image' src={data.src} alt={data.description}/>
       )
   }
+ 
   return false;
 }
 

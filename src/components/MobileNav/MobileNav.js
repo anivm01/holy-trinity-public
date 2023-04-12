@@ -43,7 +43,7 @@ function MobileNav() {
             </li>
             <li className="mobile-nav__item">
               <NavLink to="/worship-offices" className="mobile-nav__link">
-                Worship Offices
+                Broadcasts
               </NavLink>
             </li>
             <li className="mobile-nav__item">

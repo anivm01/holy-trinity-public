@@ -5,8 +5,8 @@ import Image from "../Image/Image";
 import { useLanguage } from "../../utils/LanguageContext";
 import { API_URL } from "../../utils/api";
 
-function ImageDeliverer({url}) {
-    const language = useLanguage()
+function ImageDeliverer({ url, placeholder }) {
+  const language = useLanguage();
   const { data, loading, error } = useFetch(url);
 
   if (loading) {
@@ -25,13 +25,19 @@ function ImageDeliverer({url}) {
   }
 
   if (error) {
+    if (placeholder) {
+      return <img className="image" src={placeholder} alt="placeholder" />;
+    }
     return false;
   }
 
   if (data) {
     return (
-        <Image url={`${API_URL}/images/${language}/${data.image_id}`} />
-    )
+      <Image
+        url={`${API_URL}/images/${language}/${data.image_id}`}
+        placeholder={placeholder}
+      />
+    );
   }
   return false;
 }
