@@ -12,7 +12,7 @@ function HallBg() {
         За запитвания относно дата и час, за оглед и за резервации:
       </h3>
       <div className="hall__item">
-        <p className="hall__name">Fred Meanchoff</p>
+        <p className="hall__name">Фред Минков</p>
         <p>
           Тел.{" "}
           <a className="hall__contact" href="tel:416-483-5366">
