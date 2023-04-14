@@ -16,13 +16,23 @@ function FooterContent() {
           <p>
             <span>e-mail:</span>
             <span>
-              <a
+              {/* <a
                 className="footer__email"
                 href="mailto:ourholytrinitymbc@gmail.com"
                 target="_blank"
               >
                 ourholytrinitymbc@gmail.com
-              </a>
+              </a> */}
+              <Link
+                className="footer__email"
+                to="#"
+                onClick={(e) => {
+                  window.location.href = "mailto:ourholytrinitymbc@gmail.com";
+                  e.preventDefault();
+                }}
+              >
+                ourholytrinitymbc@gmail.com
+              </Link>
             </span>
           </p>
         </address>
