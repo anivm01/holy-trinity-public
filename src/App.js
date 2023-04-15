@@ -14,7 +14,7 @@ import ObituaryFull from "./components/ObituaryFull/ObituaryFull";
 import Footer from "./components/Footer/Footer";
 import DonationsPage from "./pages/DonationsPage/DonationsPage";
 import HallPage from "./pages/HallPage/HallPage";
-import ContactForm from "./components/ContactForm/ContactForm";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
           <Route path="/worship-offices/:id" element={<WorshipOfficeSingle/>} />
           <Route path="/donations" element={<DonationsPage/>} />
           <Route path="/hall" element={<HallPage/>} />
-          <Route path="/contact" element={<ContactForm/>} />
+          <Route path="/contact" element={<ContactPage/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
