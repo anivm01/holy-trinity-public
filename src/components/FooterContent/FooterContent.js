@@ -15,25 +15,7 @@ function FooterContent() {
           <p>Tel.: 647-293-4426</p>
           <p>
             <span>e-mail:</span>
-            <span>
-              {/* <a
-                className="footer__email"
-                href="mailto:ourholytrinitymbc@gmail.com"
-                target="_blank"
-              >
-                ourholytrinitymbc@gmail.com
-              </a> */}
-              <Link
-                className="footer__email"
-                to="#"
-                onClick={(e) => {
-                  window.location.href = "mailto:ourholytrinitymbc@gmail.com";
-                  e.preventDefault();
-                }}
-              >
-                ourholytrinitymbc@gmail.com
-              </Link>
-            </span>
+            <span className="footer__email">ourholytrinitymbc@gmail.com</span>
           </p>
         </address>
         <iframe
@@ -52,13 +34,7 @@ function FooterContent() {
         <p className="footer__name"> Nick Stefanoff</p>
         <p className="footer__position">Treasurer of the Board of Trustees:</p>
         <p className="footer__name"> Fred Meanchoff</p>
-        <a
-          href="mailto:ourholytrinitymbc@gmail.com"
-          className="footer__link"
-          target="_blank"
-        >
-          Contact Us
-        </a>
+        <Link className="footer__link" to="/contact" target="_blank">Contact Us</Link>
         <div className="footer__socials">
           <a
             href="https://www.youtube.com/@celebrationatholytrinitych4006"
@@ -69,9 +45,9 @@ function FooterContent() {
           <a href="https://www.facebook.com/ourholytrinity" target="_blank">
             <img className="footer__icon" src={facebook} />
           </a>
-          <a href="mailto:ourholytrinitymbc@gmail.com" target="_blank">
+          <Link to="/contact" target="_blank">
             <img className="footer__icon" src={gmail} />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="footer__block footer__block--end">
