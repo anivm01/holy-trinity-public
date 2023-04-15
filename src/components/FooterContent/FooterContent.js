@@ -2,7 +2,7 @@ import React from "react";
 import facebook from "../../assets/facebook.svg";
 import youtube from "../../assets/youtube.svg";
 import gmail from "../../assets/gmail.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function FooterContent() {
   return (
@@ -34,7 +34,7 @@ function FooterContent() {
         <p className="footer__name"> Nick Stefanoff</p>
         <p className="footer__position">Treasurer of the Board of Trustees:</p>
         <p className="footer__name"> Fred Meanchoff</p>
-        <Link className="footer__link" to="/contact" target="_blank">Contact Us</Link>
+        <NavLink className="footer__link" to="/contact" target="_blank">Contact Us</NavLink>
         <div className="footer__socials">
           <a
             href="https://www.youtube.com/@celebrationatholytrinitych4006"
@@ -45,9 +45,9 @@ function FooterContent() {
           <a href="https://www.facebook.com/ourholytrinity" target="_blank">
             <img className="footer__icon" src={facebook} />
           </a>
-          <Link to="/contact" target="_blank">
+          <NavLink to="/contact" target="_blank">
             <img className="footer__icon" src={gmail} />
-          </Link>
+          </NavLink>
         </div>
       </div>
       <div className="footer__block footer__block--end">
@@ -56,16 +56,16 @@ function FooterContent() {
           <p className="footer__text">
             We humbly accept donations from individuals and corporations.
           </p>
-          <Link to="/donations" className="footer__link">
+          <NavLink to="/donations" className="footer__link">
             Learn More
-          </Link>
+          </NavLink>
         </div>
         <div>
           <h3>Hall for Rent</h3>
           <p>Our church hall is available for rental</p>
-          <Link to="/hall" className="footer__link">
+          <NavLink to="/hall" className="footer__link">
             Learn More
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>
