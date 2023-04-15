@@ -34,7 +34,7 @@ function FooterContent() {
         <p className="footer__name"> Nick Stefanoff</p>
         <p className="footer__position">Treasurer of the Board of Trustees:</p>
         <p className="footer__name"> Fred Meanchoff</p>
-        <NavLink className="footer__link" to="/contact" target="_blank">Contact Us</NavLink>
+        <NavLink className="footer__link" to="/contact" >Contact Us</NavLink>
         <div className="footer__socials">
           <a
             href="https://www.youtube.com/@celebrationatholytrinitych4006"
@@ -45,7 +45,7 @@ function FooterContent() {
           <a href="https://www.facebook.com/ourholytrinity" target="_blank">
             <img className="footer__icon" src={facebook} />
           </a>
-          <NavLink to="/contact" target="_blank">
+          <NavLink to="/contact">
             <img className="footer__icon" src={gmail} />
           </NavLink>
         </div>
