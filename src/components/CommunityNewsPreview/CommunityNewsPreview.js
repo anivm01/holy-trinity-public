@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { API_URL } from "../../utils/api";
 import { createMarkup } from "../../utils/createMarkup";
 import { useLanguage } from "../../utils/LanguageContext";
-import Image from "../Image/Image";
-import ImageDeliverer from "../ImageDeliverer/ImageDeliverer";
 import "./CommunityNewsPreview.scss";
 
 function CommunityNewsPreview({ item }) {
