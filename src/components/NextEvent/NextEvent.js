@@ -51,7 +51,20 @@ function NextEvent({ url }) {
       />
     );
   }
-  return <NoData />;
+  return (
+    <div className="next-event__box">
+      {language === "bg" ? (
+        <h2 className="next-event__error">
+          В момента нямаме предстоящи събития. Проверете отново на по-късна дата
+        </h2>
+      ) : (
+        <h2 className="next-event__error">
+          We don't have any upcoming events at this time. Check back with us at
+          a later date for updates.
+        </h2>
+      )}
+    </div>
+  );
 }
 
 export default NextEvent;
