@@ -1,12 +1,11 @@
 import React from "react";
 import { ThreeDots } from "react-loader-spinner";
 import { createMarkup } from "../../utils/createMarkup";
-import { useLanguage } from "../../utils/LanguageContext";
 import useFetch from "../../utils/useFetchImage";
 import NoData from "../NoData/NoData";
 import "./WeeklyAnnouncement.scss";
 
-function WeeklyAnnouncement({url}) {
+function WeeklyAnnouncement({ url }) {
   const { data, loading, error } = useFetch(url);
   if (loading) {
     return (
@@ -29,7 +28,10 @@ function WeeklyAnnouncement({url}) {
     return (
       <article className="weekly-announcement">
         <h3 className="weekly-announcement__title">{data.title}</h3>
-        <div className="weekly-announcement__content" dangerouslySetInnerHTML={createMarkup(data.announcement)}></div>
+        <div
+          className="weekly-announcement__content"
+          dangerouslySetInnerHTML={createMarkup(data.announcement)}
+        ></div>
       </article>
     );
   }

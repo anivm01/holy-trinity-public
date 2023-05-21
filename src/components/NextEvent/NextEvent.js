@@ -5,7 +5,6 @@ import { dateObjectConverter } from "../../utils/dateConversion";
 import { useLanguage } from "../../utils/LanguageContext";
 import useFetch from "../../utils/useFetchImage";
 import Event from "../Event/Event";
-import NoData from "../NoData/NoData";
 import "./NextEvent.scss";
 
 function NextEvent({ url }) {
