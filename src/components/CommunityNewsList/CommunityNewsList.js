@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import "./CommunityNewsList.scss";
-import { createMarkup } from "../../utils/createMarkup";
 import CommunityNewsPreview from "../CommunityNewsPreview/CommunityNewsPreview";
 import NoData from "../NoData/NoData";
-import { useLanguage } from "../../utils/LanguageContext";
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../utils/useFetch";
 import PaginationContainer from "../PaginationContainer/PaginationContainer";
 
 function CommunityNewsList({ url }) {
-  const language = useLanguage();
   const { data, loading, error } = useFetch(url);
   const [dataPerPage, setDataPerPage] = useState([]);
 
@@ -33,7 +30,7 @@ function CommunityNewsList({ url }) {
   }
 
   if (data) {
-    console.log(data)
+    console.log(data);
     return (
       <section>
         <PaginationContainer
@@ -43,12 +40,7 @@ function CommunityNewsList({ url }) {
         >
           <div className="community-news-list">
             {dataPerPage.map((single, index) => {
-              return (
-                <CommunityNewsPreview
-                  key={index}
-                  item={single}
-                />
-              );
+              return <CommunityNewsPreview key={index} item={single} />;
             })}
           </div>
         </PaginationContainer>
