@@ -48,7 +48,7 @@ function MobileNav() {
             </li>
             <li className="mobile-nav__item">
               <NavLink to="/events" className="mobile-nav__link">
-                Events
+                Feasts
               </NavLink>
             </li>
             <li className="mobile-nav__item">

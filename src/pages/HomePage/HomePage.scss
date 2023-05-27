@@ -3,6 +3,8 @@
 
 .home {
     &__section {
+        text-align: center;
+
         @include desktop {
             margin: 2rem 0;
         }

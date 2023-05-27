@@ -6,6 +6,7 @@ import { useLanguage } from "../../utils/LanguageContext";
 import useFetch from "../../utils/useFetchImage";
 import Event from "../Event/Event";
 import "./NextEvent.scss";
+import { Link } from "react-router-dom";
 
 function NextEvent({ url }) {
   const language = useLanguage();
@@ -43,11 +44,16 @@ function NextEvent({ url }) {
   }
   if (data) {
     return (
-      <Event
-        date={dateObjectConverter(data.event_date)}
-        title={data.title}
-        details={createMarkup(data.event_details)}
-      />
+      <>
+        <Event
+          date={dateObjectConverter(data.event_date)}
+          title={data.title}
+          details={createMarkup(data.event_details)}
+        />
+        <Link to="/events" className="button">
+          {language === "bg" ? "Събития" : "Feasts"}
+        </Link>
+      </>
     );
   }
   return (
