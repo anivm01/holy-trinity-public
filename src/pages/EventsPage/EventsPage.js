@@ -7,28 +7,21 @@ import { useLanguage } from "../../utils/LanguageContext";
 import Events from "../../components/Events/Events";
 import { API_URL } from "../../utils/api";
 
-
 function EventsPage() {
   const language = useLanguage();
-  const currentDate = Math.floor(Date.now()/1000)
+  const currentDate = Math.floor(Date.now() / 1000);
   return (
     <main className="events-page">
       {language === "bg" ? (
-        <HeroBg
-          image={eventsHero}
-          title={"Присъединете се към нас за едно от нашите забавни събития!"}
-        />
+        <HeroBg image={eventsHero} title={"Обединете се"} />
       ) : (
-        <Hero
-          image={eventsHero}
-          title={"Join us for one of our wonderful community events!"}
-        />
+        <Hero image={eventsHero} title={"Join together"} />
       )}
       <section className="events-page__upcoming">
         {language === "bg" ? (
-          <h3 className="events-page__heading">Предстоящи Събития</h3>
+          <h3 className="events-page__heading">Предстоящи</h3>
         ) : (
-          <h3 className="events-page__heading">Upcoming Events</h3>
+          <h3 className="events-page__heading">Upcoming</h3>
         )}
         <Events
           url={`${API_URL}/published/${language}/events/upcoming/${currentDate}`}
@@ -37,9 +30,9 @@ function EventsPage() {
       </section>
       <section className="events-page__recent">
         {language === "bg" ? (
-          <h3 className="events-page__heading">Минали Събития</h3>
+          <h3 className="events-page__heading">Минали</h3>
         ) : (
-          <h3 className="events-page__heading">Recent Events</h3>
+          <h3 className="events-page__heading">Recent</h3>
         )}
         <Events
           url={`${API_URL}/published/${language}/events/past/${currentDate}`}

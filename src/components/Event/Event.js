@@ -1,19 +1,22 @@
-import React from 'react'
-import './Event.scss'
+import React from "react";
+import "./Event.scss";
 
-function Event({title, details, date}) {
+function Event({ title, details, date }) {
   return (
-    <div className='event'>
-      <div className='event__header'>
-          <span className='event__date'>{date.month} {date.date}</span>
-          <span className='event__date'>{date.year}</span>
+    <div className="event">
+      <div className="event__header">
+        <span className="event__date">
+          {date.month} {date.date}
+        </span>
+        <span className="event__date">{date.day}</span>
+        <span className="event__date">{date.year}</span>
       </div>
-      <div className='event__main'>
-          <h2>{title}</h2>
-          <div className='event__details' dangerouslySetInnerHTML={details}></div>
+      <div className="event__main">
+        <h2>{title}</h2>
+        <div className="event__details" dangerouslySetInnerHTML={details}></div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Event
+export default Event;
