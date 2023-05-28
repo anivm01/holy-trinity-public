@@ -26,7 +26,7 @@ function LatestWorshipOffice({ url }) {
     );
   }
   if (error) {
-    return <NoData />;
+    return <div></div>;
   }
   if (data) {
     const date = dateObjectConverter(data.date);

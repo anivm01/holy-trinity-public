@@ -26,34 +26,25 @@ function NextEvent({ url }) {
     );
   }
   if (error) {
-    return (
-      <div className="next-event__box">
-        {language === "bg" ? (
-          <h2 className="next-event__error">
-            В момента нямаме предстоящи събития. Проверете отново на по-късна
-            дата
-          </h2>
-        ) : (
-          <h2 className="next-event__error">
-            We don't have any upcoming events at this time. Check back with us
-            at a later date for updates.
-          </h2>
-        )}
-      </div>
-    );
+    return <div className="next-event__box"></div>;
   }
   if (data) {
     return (
-      <>
-        <Event
-          date={dateObjectConverter(data.event_date)}
-          title={data.title}
-          details={createMarkup(data.event_details)}
-        />
+      <div className="next-event__main">
+        {data.map((single, index) => {
+          return (
+            <Event
+              key={index}
+              date={dateObjectConverter(single.event_date)}
+              title={single.title}
+              details={createMarkup(single.event_details)}
+            />
+          );
+        })}
         <Link to="/events" className="button">
           {language === "bg" ? "Събития" : "Feasts"}
         </Link>
-      </>
+      </div>
     );
   }
   return (
