@@ -6,14 +6,23 @@
     cursor: pointer;
     text-decoration: none;
     color: $wine-red;
-    
+
     &__image {
         background-image: url('../../assets/sunset-background.jpg');
         width: 10rem;
         aspect-ratio: 16/9;
         overflow: hidden;
         margin: 0 auto;
+
+        @include tablet {
+            width: 15rem;
+        }
+
+        @include desktop {
+            width: 20rem;
+        }
     }
+
     &__title {
         font-size: 1.1rem;
         width: 10rem;
