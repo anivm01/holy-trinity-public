@@ -3,7 +3,6 @@ import { ThreeDots } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import { dateObjectConverter } from "../../utils/dateConversion";
 import useFetch from "../../utils/useFetchImage";
-import NoData from "../NoData/NoData";
 import imageIcon from "../../assets/video-icon.svg";
 import placeholder from "../../assets/sunset-background.jpg";
 import "./LatestWorshipOffice.scss";
@@ -60,7 +59,7 @@ function LatestWorshipOffice({ url }) {
       </div>
     );
   }
-  return <NoData />;
+  return <div></div>;
 }
 
 export default LatestWorshipOffice;
