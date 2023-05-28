@@ -30,7 +30,6 @@ function CommunityNewsList({ url }) {
   }
 
   if (data) {
-    console.log(data);
     return (
       <section>
         <PaginationContainer

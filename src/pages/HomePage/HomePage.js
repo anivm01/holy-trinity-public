@@ -21,11 +21,6 @@ function HomePage() {
         <Hero image={homeHero} title={"Welcome"} />
       )}
       <section className="home__section">
-        {language === "bg" ? (
-          <h2 className="home__heading">Седмично Съобщение</h2>
-        ) : (
-          <h2 className="home__heading">Weekly Annoucnement</h2>
-        )}
         <WeeklyAnnouncement
           url={`${API_URL}/published/${language}/announcements/latest/${currentDate}`}
         />
