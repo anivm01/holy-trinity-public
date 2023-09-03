@@ -2,7 +2,7 @@ import React from "react";
 import "./EventsPage.scss";
 import Hero from "../../components/Hero/Hero";
 import HeroBg from "../../components/Hero/HeroBg";
-import eventsHero from "../../assets/event.jpg";
+import eventsHero from "../../assets/feasts-hero.jpg";
 import { useLanguage } from "../../utils/LanguageContext";
 import Events from "../../components/Events/Events";
 import { API_URL } from "../../utils/api";

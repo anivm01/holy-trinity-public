@@ -9,16 +9,29 @@ import { API_URL } from "../../utils/api";
 import NextEvent from "../../components/NextEvent/NextEvent";
 import LatestNews from "../../components/LatestNews/LatestNews";
 import LatestWorshipOffice from "../../components/LatestWorshipOffice/LatestWorshipOffice";
+import useFetch from "../../utils/useFetchImage";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function HomePage() {
   const language = useLanguage();
   const currentDate = Math.floor(Date.now() / 1000);
+  const [hero, setHero] = useState(homeHero);
+  const { data } = useFetch(
+    `${API_URL}/published/${language}/worship-offices/latest/${currentDate}`
+  );
+  useEffect(() => {
+    if (data) {
+      setHero(data.src);
+    }
+  }, [data]);
+
   return (
     <main className="home">
       {language === "bg" ? (
-        <HeroBg image={homeHero} title={"Добре Дошли!"} />
+        <HeroBg image={hero} title={"Добре Дошли!"} />
       ) : (
-        <Hero image={homeHero} title={"Welcome"} />
+        <Hero image={hero} title={"Welcome"} />
       )}
       <section className="home__section">
         <WeeklyAnnouncement
