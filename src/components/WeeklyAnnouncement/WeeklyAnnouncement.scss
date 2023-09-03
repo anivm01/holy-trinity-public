@@ -5,6 +5,7 @@
     padding: 1rem;
     width: 100%;
     color: $wine-red;
+
     @include tablet {
         padding: 1.5rem;
     }
@@ -33,7 +34,7 @@
     }
 
     &__content {
-        max-width: 75ch;
+        max-width: 1280px;
         margin: 0 auto;
     }
 }
