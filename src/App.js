@@ -23,18 +23,17 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />}/>
-          <Route path="/contact-us"  />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/in-memoriam" element={<InMemoriamPage />} />
           <Route path="/in-memoriam/:id" element={<ObituaryFull />} />
           <Route path="/community-news" element={<CommunityNewsPage />} />
           <Route path="/community-news/:id" element={<CommunityNewsFull />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/worship-offices" element={<WorshipOfficesPage/>} />
-          <Route path="/worship-offices/:id" element={<WorshipOfficeSingle/>} />
-          <Route path="/donations" element={<DonationsPage/>} />
-          <Route path="/hall" element={<HallPage/>} />
-          <Route path="/contact" element={<ContactPage/>} />
+          <Route path="/worship-offices" element={<WorshipOfficesPage />} />
+          <Route path="/worship-offices/:id" element={<WorshipOfficeSingle />} />
+          <Route path="/donations" element={<DonationsPage />} />
+          <Route path="/hall" element={<HallPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
