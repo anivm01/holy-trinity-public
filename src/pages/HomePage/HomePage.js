@@ -39,6 +39,11 @@ function HomePage() {
         />
       </section>
       <section className="home__section">
+        {language === "bg" ? (
+          <h2 className="home__heading">Присъединете се към службата тази седмица през Интернет</h2>
+        ) : (
+          <h2 className="home__heading">Join this week's worship office online</h2>
+        )}
         <LatestWorshipOffice
           url={`${API_URL}/published/${language}/worship-offices/latest/${currentDate}`}
         />
