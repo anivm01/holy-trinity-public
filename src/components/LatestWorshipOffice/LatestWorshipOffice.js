@@ -6,11 +6,9 @@ import useFetch from "../../utils/useFetchImage";
 import imageIcon from "../../assets/video-icon.svg";
 import placeholder from "../../assets/sunset-background.jpg";
 import "./LatestWorshipOffice.scss";
-import { useLanguage } from "../../utils/LanguageContext";
 
 function LatestWorshipOffice({ url }) {
   const { data, loading, error } = useFetch(url);
-  const language = useLanguage();
 
   if (loading) {
     return (
