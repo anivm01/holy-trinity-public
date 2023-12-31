@@ -1,17 +1,26 @@
 @use "../../partials/colors" as*;
-@use "../../partials/breakpoints"as*;
+@use "../../partials/breakpoints" as*;
+
 .worship-office-latest {
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     color: $wine-red;
     border: 1px solid $wine-red;
     width: 100%;
     max-width: 50rem;
     margin: 0 auto;
 
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: .5rem;
+
+    }
+
     &__title {
-        width: 100%;
-        max-width: 50rem;
         background-color: $golden;
         padding: .5rem 1rem;
         overflow: hidden;
@@ -19,25 +28,25 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         font-size: 1.1rem;
+
         @include tablet {
             font-size: 1.2rem;
         }
+
         @include desktop {
             font-size: 1.3rem;
         }
     }
+
     &__date {
-        width: 100%;
-        max-width: 50rem;
         background-color: $wine-red;
         color: $beige;
         padding: 0 1rem;
         text-align: end;
         font-size: 1rem;
     }
+
     &__image {
-        width: 100%;
-        max-width: 50rem;
         aspect-ratio: 16/9;
         overflow: hidden;
         position: relative;
@@ -45,20 +54,25 @@
         align-items: center;
         justify-content: center;
         background-color: $wine-red;
+
         &:hover {
             opacity: .8;
         }
-        
+
     }
+
     &__icon {
         position: absolute;
-        width: 4rem;
+        width: 3rem;
+
         @include desktop {
-            width: 6rem;
+            width: 4rem;
         }
+
         &:hover {
             scale: 1.1;
         }
+
         &:active {
             scale: .9;
         }

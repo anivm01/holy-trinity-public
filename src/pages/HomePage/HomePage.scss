@@ -2,17 +2,73 @@
 @use "../../partials/breakpoints" as*;
 
 .home {
+    &__hero {
+        width: 100%;
+        background-color: $golden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+            background-image: url("../../assets/sunset-background.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    }
+
+    &__hero-background {
+        background-image: url("../../assets/iconostas.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 0 auto;
+        background-color: $wine-red-semi;
+        max-width: 80rem;
+        max-height: 50vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+            /* width of the entire scrollbar */
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $golden;
+            /* color of the tracking area */
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $wine-red;
+            /* color of the scroll thumb */
+            border-radius: 20px;
+            /* roundness of the scroll thumb */
+            border: 3px solid $golden;
+            /* creates padding around scroll thumb */
+        }
+
+        @include desktop {
+            padding: 0 2rem;
+        }
+    }
+
     &__section {
         text-align: center;
 
         @include desktop {
-            margin: 2rem 0;
+            margin: 1rem 0;
+        }
+
+        &--video {
+            @include desktop {
+                position: relative;
+            }
         }
     }
 
     &__heading {
         color: $wine-red;
-        padding: 1rem 1.5rem;
+        padding: .5rem 1rem;
         width: 100%;
         font-size: 1.1rem;
         border-bottom: 4px solid $wine-red;
@@ -27,5 +83,18 @@
             font-size: 1.5rem;
             box-shadow: none;
         }
+    }
+
+    &__main-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        // @include desktop {
+        //     flex-direction: row;
+        //     align-items: flex-start;
+        // }
     }
 }

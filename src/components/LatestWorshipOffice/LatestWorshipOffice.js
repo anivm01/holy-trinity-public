@@ -6,9 +6,11 @@ import useFetch from "../../utils/useFetchImage";
 import imageIcon from "../../assets/video-icon.svg";
 import placeholder from "../../assets/sunset-background.jpg";
 import "./LatestWorshipOffice.scss";
+import { useLanguage } from "../../utils/LanguageContext";
 
 function LatestWorshipOffice({ url }) {
   const { data, loading, error } = useFetch(url);
+  const language = useLanguage();
 
   if (loading) {
     return (
@@ -30,33 +32,33 @@ function LatestWorshipOffice({ url }) {
   if (data) {
     const date = dateObjectConverter(data.date);
     return (
-      <div>
-        <Link
-          to={`/worship-offices/${data.id}`}
-          className="worship-office-latest"
-        >
-          <div className="worship-office-latest__image">
-            {data.src ? (
-              <img className="image" src={data.src} alt={data.description} />
-            ) : (
-              <img
-                src={placeholder}
-                alt="thumbnail placeholder"
-                className="image"
-              />
-            )}
+      <Link
+        to={`/worship-offices/${data.id}`}
+        className="worship-office-latest"
+      >
+        <div className="worship-office-latest__image">
+          {data.src ? (
+            <img className="image" src={data.src} alt={data.description} />
+          ) : (
             <img
-              className="worship-office-latest__icon"
-              src={imageIcon}
-              alt="video icon"
+              src={placeholder}
+              alt="thumbnail placeholder"
+              className="image"
             />
-          </div>
+          )}
+          <img
+            className="worship-office-latest__icon"
+            src={imageIcon}
+            alt="video icon"
+          />
+        </div>
+        <div className="worship-office-latest__text">
           <h3 className="worship-office-latest__title">{data.title}</h3>
           <h4 className="worship-office-latest__date">
             {date.day}, {date.month} {date.date}
           </h4>
-        </Link>
-      </div>
+        </div>
+      </Link>
     );
   }
   return <div></div>;
