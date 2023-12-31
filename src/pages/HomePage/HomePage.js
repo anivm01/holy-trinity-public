@@ -14,11 +14,13 @@ function HomePage() {
   return (
     <main className="home">
       <section className="home__hero">
-        <div className="home__hero-background">
+        {/* <div className="home__hero-background"> */}
+        <div className="home__hero-scrollable">
           <WeeklyAnnouncement
             url={`${API_URL}/published/${language}/announcements/latest/${currentDate}`}
           />
         </div>
+        {/* </div> */}
       </section>
       <section className="home__section home__section--video">
         {language === "bg" ? (

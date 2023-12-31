@@ -1,32 +1,37 @@
 @use "../../partials/colors" as*;
-@use "../../partials/breakpoints"as*;
+@use "../../partials/breakpoints" as*;
 
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+
     &__top {
         width: 100%;
-        padding: 1rem;
+        padding: 1rem 1rem .5rem 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         @include desktop {
-            padding: 2rem 2rem 1rem 2rem;
+            padding: 1rem 2rem .5rem 2rem;
             max-width: 80rem;
         }
     }
+
     &__right {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
         gap: 1rem;
+
         @include desktop {
             gap: 2rem;
             flex-direction: row;
         }
     }
+
     &__home {
         text-decoration: none;
         padding: 0;
@@ -36,18 +41,18 @@
 
     &__logo {
         width: 5rem;
+
         @include tablet {
             width: 6rem;
         }
-        @include desktop {
-            width: 8rem;
-        }
     }
-    &__language{
+
+    &__language {
         background-color: transparent;
         border: none;
         cursor: pointer;
     }
+
     &__icon {
         width: 1.5rem;
 
@@ -72,11 +77,13 @@
         font-size: .9rem;
         text-transform: uppercase;
         transform: translateY(2px);
+
         @include tablet {
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: .1rem;
         }
+
         @include tiny-mobile {
             font-size: .8rem;
         }
