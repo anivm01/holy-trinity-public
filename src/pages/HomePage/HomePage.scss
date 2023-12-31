@@ -4,29 +4,28 @@
 .home {
     &__hero {
         width: 100%;
-        background-color: $golden;
+        background-color: $wine-red;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        @include desktop {
-            background-image: url("../../assets/sunset-background.jpg");
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-    }
-
-    &__hero-background {
         background-image: url("../../assets/iconostas.jpg");
         background-size: cover;
-        background-attachment: fixed;
-        margin: 0 auto;
-        background-color: $wine-red-semi;
-        max-width: 80rem;
+    }
+
+    // &__hero-background {
+    //     background-image: url("../../assets/iconostas.jpg");
+    //     background-size: cover;
+    //     margin: 0 auto;
+    // }
+
+    &__hero-scrollable {
+        max-width: 50rem;
         max-height: 50vh;
         overflow-y: scroll;
         overflow-x: hidden;
+        margin: 2rem 0;
+        border-radius: 20px;
+
 
         &::-webkit-scrollbar {
             width: 12px;
@@ -35,6 +34,7 @@
 
         &::-webkit-scrollbar-track {
             background: $golden;
+            border-radius: 20px;
             /* color of the tracking area */
         }
 
@@ -45,10 +45,6 @@
             /* roundness of the scroll thumb */
             border: 3px solid $golden;
             /* creates padding around scroll thumb */
-        }
-
-        @include desktop {
-            padding: 0 2rem;
         }
     }
 

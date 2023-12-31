@@ -2,15 +2,9 @@
 @use "../../partials/breakpoints" as*;
 
 .weekly-announcement {
-    padding: 1rem;
     width: 100%;
     color: $wine-red;
     border-radius: 35px;
-
-
-    @include tablet {
-        padding: 3rem 2rem;
-    }
 
     @include desktop {
         max-width: 80rem;
@@ -25,9 +19,8 @@
         font-size: 1.25rem;
         color: $wine-red;
         background-color: $golden-semi;
-        width: fit-content;
-        margin: 1rem auto;
-        padding: .5rem 2rem;
+        margin: 0 auto;
+        padding-top: 1rem;
 
         @include tablet {
             font-size: 1.5rem;
