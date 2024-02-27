@@ -24,11 +24,11 @@ function EventsPage() {
           <h3 className="events-page__heading">Upcoming</h3>
         )}
         <Events
-          url={`${API_URL}/published/${language}/events/upcoming/${currentDate}`}
+          url={`${API_URL}/event/upcoming/${currentDate}`}
           timeline={"upcoming"}
         />
       </section>
-      <section className="events-page__recent">
+      {/* <section className="events-page__recent">
         {language === "bg" ? (
           <h3 className="events-page__heading">Минали</h3>
         ) : (
@@ -38,7 +38,7 @@ function EventsPage() {
           url={`${API_URL}/published/${language}/events/past/${currentDate}`}
           timeline={"past"}
         />
-      </section>
+      </section> */}
     </main>
   );
 }
