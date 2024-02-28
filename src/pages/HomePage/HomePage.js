@@ -37,7 +37,7 @@ function HomePage() {
       </section>
       <section className="home__section">
         <NextEvent
-          url={`${API_URL}/published/${language}/events/closest-upcoming/${currentDate}`}
+          url={`${API_URL}/event/upcoming/${currentDate}`}
         />
       </section>
       <section className="home__section">

@@ -5,9 +5,11 @@ import { dateObjectConverter } from "../../utils/dateConversion";
 import useFetch from "../../utils/useFetchImage";
 import Event from "../Event/Event";
 import "./NextEvent.scss";
+import { useLanguage } from "../../utils/LanguageContext";
 
 function NextEvent({ url }) {
   const { data, loading, error } = useFetch(url);
+  const language = useLanguage();
   if (loading) {
     return (
       <ThreeDots
@@ -26,15 +28,17 @@ function NextEvent({ url }) {
     return <div className="next-event__box"></div>;
   }
   if (data) {
+    const firstThreeItems = data.slice(0, 3)
     return (
       <div className="next-event__main">
-        {data.map((single, index) => {
+        {firstThreeItems.map((single, index) => {
           return (
             <Event
               key={index}
               date={dateObjectConverter(single.event_date)}
-              title={single.title}
-              details={createMarkup(single.event_details)}
+              title={language === "en" ? single.title : single.title_bg}
+              isDefault={single.is_default}
+              details={language === "en" ? createMarkup(single.event_details) : createMarkup(single.event_details_bg)}
             />
           );
         })}
