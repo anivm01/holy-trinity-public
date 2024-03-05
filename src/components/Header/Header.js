@@ -35,7 +35,7 @@ function Header() {
           </button>
         </div>
       </div>
-      <div className="header__bottom">
+      {/* <div className="header__bottom">
         {language === "bg" ? (
           <h1 className="header__title">
             Света Троица Македоно-Българска Източно-Православна Църква
@@ -45,7 +45,7 @@ function Header() {
             Holy Trinity Macedono-Bulgarian Eastern Orthodox Church
           </h1>
         )}
-      </div>
+      </div> */}
     </header>
   );
 }
