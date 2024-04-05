@@ -1,0 +1,17 @@
+@use "../../../partials/colors" as*;
+
+@use "../../../partials/breakpoints" as*;
+
+.section-heading {
+    color: $wine-red;
+    text-align: center;
+    margin: .75rem auto;
+    padding: 0 1rem;
+    width: 100%;
+    font-size: 1.1rem;
+    border-bottom: 4px solid $wine-red;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
+}

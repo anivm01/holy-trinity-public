@@ -3,233 +3,27 @@
 @use "../../partials/global" as*;
 
 .home {
-    &__hero {
-        max-width: 80rem;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include desktop {
+        max-width: 1280px;
+        padding: 2rem;
     }
 
-    &__top-section {
-        display: flex;
-        max-width: 80rem;
-        margin: 0 auto;
-    }
-
-    &__left {
-        flex-basis: 70%;
-        padding: 2rem 0;
+    &__top {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-    }
-
-    &__right {
-        flex-basis: 30%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-
-    &__title {
-        font-size: 1rem;
-        color: $wine-red;
-        text-align: center;
-        margin: 0 auto;
-        padding: .5rem 0;
-        width: 100%;
-        background-color: $golden;
-
-        @include tablet {
-            font-size: 1.2rem;
-            letter-spacing: 1.2px;
-        }
-
-        @include tiny-mobile {
-            font-size: .8rem;
-        }
-    }
-
-    &__subtitle {
-        font-size: 1.5rem;
-        color: $wine-red;
-        text-align: center;
-        margin: 0 auto;
-        padding: .5rem 0;
-        width: 100%;
-    }
-
-
-    &__hero-container {
-        max-width: 50rem;
-        background-color: $wine-red;
-        // margin: 0 auto;
-
-        // gap: 2rem;
-        // padding-right: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__profile {
-        display: flex;
-        max-width: 50rem;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    &__hero-img-box {
-        max-width: 50rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        // flex-direction: column;
-        // background-image: url("../../assets/iconostas.jpg");
-        // background-size: cover;
-        // background-position: top center;
-    }
-
-    &__hero-img {
-        // border-radius: 100%;
-        max-width: 200px;
-        max-height: 200px;
-    }
-
-    &__parish-priest {
-        background-color: $wine-red;
-        color: $golden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    &__parish-priest-link {
-        background-color: $wine-red;
-        text-decoration: none;
-        padding: 0 1rem;
-        color: $golden;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         gap: 2rem;
 
-
-        &:hover {
-            color: $beige;
-        }
-    }
-
-    // &__hero-background {
-    //     background-image: url("../../assets/iconostas.jpg");
-    //     background-size: cover;
-    //     margin: 0 auto;
-    // }
-
-    // &__hero-scrollable {
-    //     background-color: $golden;
-    //     color: $wine-red;
-    //     max-width: 700px;
-    //     max-height: 250px;
-    //     overflow-y: scroll;
-    //     overflow-x: hidden;
-
-
-    //     &::-webkit-scrollbar {
-    //         width: .5rem;
-    //         /* width of the entire scrollbar */
-    //     }
-
-    //     &::-webkit-scrollbar-track {
-    //         background: transparent;
-    //         border-radius: 20px;
-    //         /* color of the tracking area */
-    //     }
-
-    //     &::-webkit-scrollbar-thumb {
-    //         background-color: $wine-red;
-    //         /* color of the scroll thumb */
-    //         border-radius: 20px;
-    //         /* roundness of the scroll thumb */
-    //         /* creates padding around scroll thumb */
-    //     }
-    // }
-
-    &__section {
-        text-align: center;
-
-        @include desktop {
-            margin: 1rem 0;
-        }
-
-        &--video {
-            @include desktop {
-                position: relative;
-            }
-        }
-    }
-
-    &__heading {
-        color: $wine-red;
-        padding: .5rem 1rem;
-        width: 100%;
-        font-size: 1.1rem;
-        border-bottom: 4px solid $wine-red;
-
         @include tablet {
-            font-size: 1.3rem;
-        }
-
-        @include desktop {
-            max-width: 50rem;
-            margin: 0 auto;
-            font-size: 1.5rem;
-            box-shadow: none;
-        }
-    }
-
-    &__main-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-
-        // @include desktop {
-        //     flex-direction: row;
-        //     align-items: flex-start;
-        // }
-    }
-
-    &__more-events {
-        text-decoration: none;
-        text-align: center;
-        margin: 0 auto;
-        padding: .25rem 2rem;
-        color: $wine-red;
-        background-color: $golden;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-
-        &:hover {
-            color: $beige;
-            background-color: $wine-red;
-
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 2rem;
         }
     }
 }

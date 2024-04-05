@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.scss";
 
-function Hero({ image, title }) {
+const Hero = ({ image, title }) => {
   return (
     <section className="hero">
       <div className="hero__background">

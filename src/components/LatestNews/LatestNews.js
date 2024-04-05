@@ -5,6 +5,8 @@ import useFetch from "../../utils/useFetchImage";
 import CommunityNewsMini from "../CommunityNewsMini/CommunityNewsMini";
 import NoData from "../NoData/NoData";
 import "./LatestNews.scss";
+import SectionHeading from "../UI/SectionHeading/SectionHeading";
+import Button from "../UI/Button/Button";
 
 function LatestNews({ url }) {
   const { data, loading, error } = useFetch(url);
@@ -29,6 +31,10 @@ function LatestNews({ url }) {
   if (data) {
     return (
       <div className="latest-news">
+        <SectionHeading
+          bgText="Последни новини от нашата общност"
+          text="Latest News From Our Community"
+        />
         <Carousel cols={3} rows={1} gap={10} loop>
           {data.map((single, index) => {
             return (
@@ -38,6 +44,7 @@ function LatestNews({ url }) {
             );
           })}
         </Carousel>
+        <Button text="See More" href="/community-news" buttonComponent="link" />
       </div>
     );
   }
