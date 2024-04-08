@@ -38,7 +38,7 @@ export const biography = {
         "Освен работата на енорийски свещеник, о. Величко поддръжа YouTube канал “Celebration at Holy Trininty Church”, а заедно със семейството си върши и много други неща за полза на енорията и поддръжка на храма. "
     ]
 }
-const url = "https://ourholytrinitymbc.com/"
+const url = "https://ourholytrinitymbc.com"
 export const documents = [
     {
         en: "Diploma in Theological Education",
