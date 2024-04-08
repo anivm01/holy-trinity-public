@@ -7,9 +7,12 @@ import imageIcon from "../../assets/video-icon.svg";
 import placeholder from "../../assets/sunset-background.jpg";
 import "./LatestWorshipOffice.scss";
 import SectionHeading from "../UI/SectionHeading/SectionHeading";
+import { useLanguage } from "../../utils/LanguageContext";
+import { latestWorshipOfficeHeading } from "../../data/homePageData";
 
 function LatestWorshipOffice({ url }) {
   const { data, loading, error } = useFetch(url);
+  const language = useLanguage()
 
   if (loading) {
     return (
@@ -33,8 +36,7 @@ function LatestWorshipOffice({ url }) {
     return (
       <section>
         <SectionHeading
-          bgText="Присъединете се към службата тази седмица през интернет"
-          text="Join us online for our latest Worship Office"
+          text={latestWorshipOfficeHeading[language]}
         />
         <Link
           to={`/worship-offices/${data.id}`}

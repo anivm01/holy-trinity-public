@@ -38,53 +38,53 @@ export const biography = {
         "Освен работата на енорийски свещеник, о. Величко поддръжа YouTube канал “Celebration at Holy Trininty Church”, а заедно със семейството си върши и много други неща за полза на енорията и поддръжка на храма. "
     ]
 }
-
+const url = "https://ourholytrinitymbc.com/"
 export const documents = [
     {
         en: "Diploma in Theological Education",
         bg: "Диплома за богословско образование",
-        url: "#"
+        url: `${url}/images/diploma.jpg`
     },
     {
         en: "Certificate of ordination",
         bg: "Свидетелство за ръкоположение",
-        url: "#"
+        url: `${url}/images/svidetelstvo.jpg`
     },
     {
         en: "Training of Trainers from the European Alliance of YMCA's",
         bg: "Обучение на обучители от Европейския алианс на YMCA",
-        url: "#"
+        url: `${url}/images/ymca-cert.jpg`
     },
     {
         en: "Certificate From the Institute for Policy Studies at Johns Hopkins University 1995",
         bg: "Сертификат от Johns Hopkins University 1995",
-        url: "#"
+        url: `${url}/images/jh95.jpg`
     },
     {
         en: "Certificate From the Institute for Policy Studies at Johns Hopkins University 1996",
         bg: "Сертификат от Johns Hopkins University 1996",
-        url: "#"
+        url: `${url}/images/jh96.jpg`
     },
     {
         en: "Letter From Rousse Metropolis About the Sending of Fr.Velichko in Canada.",
         bg: "Писмо от Русенска митрополия за изпращането на о. Величко в Канада.",
-        url: "#"
+        url: `${url}/images/letter1.jpg`
     },
     {
         en: "Photo: Fr.Velichko With His Family, Together With Metropolitan Joseph and Metropolitan Neofit(Later Patriarch of Bulgaria)",
         bg: "Снимка: о. Величко със семейството си, заедно с Митрополит Йосиф и Митрополит Неофит (по-късно Патриарх Български)",
-        url: "#"
+        url: `${url}/images/photo.jpg`
     },
     {
         en: "Inscription on a Book of Public Liturgical Offices Which Patriarch Neofitus Presented to Fr.Velichko on the Occasion of His Being Sent to Canada for Missionary Service.",
         bg: "Надпис на служебник, който Патриарх Неофит подари на о. Величко преди по повод изпращането му в Канада на мисионерско служение. ",
-        url: ""
+        url: `${url}/images/inscription.jpg`
     },
-    {
-        en: "Letter of Appointment of Archpriest Velichko Mihaylov as the Parish Priest of the Holy Trinity Macedono - Bulgarian Eastern Orthodox Church.",
-        bg: "Писмо за назначаване като енорийски свещеник на Македоно-Българската църква Св. Тройца в Торонто, Онтарио, Канада.",
-        url: ""
-    }
+    // {
+    //     en: "Letter of Appointment of Archpriest Velichko Mihaylov as the Parish Priest of the Holy Trinity Macedono - Bulgarian Eastern Orthodox Church.",
+    //     bg: "Писмо за назначаване като енорийски свещеник на Македоно-Българската църква Св. Тройца в Торонто, Онтарио, Канада.",
+    //     url: ""
+    // }
 
 ]
 

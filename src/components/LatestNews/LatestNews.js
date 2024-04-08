@@ -7,9 +7,12 @@ import NoData from "../NoData/NoData";
 import "./LatestNews.scss";
 import SectionHeading from "../UI/SectionHeading/SectionHeading";
 import Button from "../UI/Button/Button";
+import { useLanguage } from "../../utils/LanguageContext";
+import { latestNewsHeading } from "../../data/homePageData";
 
 function LatestNews({ url }) {
   const { data, loading, error } = useFetch(url);
+  const language = useLanguage()
 
   if (loading) {
     return (
@@ -32,8 +35,7 @@ function LatestNews({ url }) {
     return (
       <div className="latest-news">
         <SectionHeading
-          bgText="Последни новини от нашата общност"
-          text="Latest News From Our Community"
+          text={latestNewsHeading[language]}
         />
         <Carousel cols={3} rows={1} gap={10} loop>
           {data.map((single, index) => {

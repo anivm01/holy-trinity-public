@@ -3,7 +3,7 @@
 
 .priest-bio {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 2rem;
     color: $wine-red;
     max-width: 80rem;
@@ -15,12 +15,48 @@
         grid-gap: 2rem;
     }
 
+    &__image {
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    &__image-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            max-width: 50rem;
+            margin: 0 auto;
+            align-items: flex-start;
+        }
+
+        @include desktop {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     &__bio {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         background-color: $golden;
         padding: 1rem 2rem;
+        max-width: 50rem;
+        margin: 0 auto 2rem auto;
+
+        @include desktop {
+            margin: 0 auto;
+        }
+
     }
 
     &__documents {

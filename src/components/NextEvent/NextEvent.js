@@ -8,6 +8,7 @@ import "./NextEvent.scss";
 import { useLanguage } from "../../utils/LanguageContext";
 import SectionHeading from "../UI/SectionHeading/SectionHeading";
 import Button from "../UI/Button/Button";
+import { nextEventHeading } from "../../data/homePageData";
 
 function NextEvent({ url }) {
   const { data, loading, error } = useFetch(url);
@@ -34,8 +35,7 @@ function NextEvent({ url }) {
     return (
       <div className="next-event__main">
         <SectionHeading
-          bgText="Предстоящи събития в нашата църква"
-          text="Upcoming Events at our church"
+          text={nextEventHeading[language]}
         />
         {firstThreeItems.map((single, index) => {
           return (
