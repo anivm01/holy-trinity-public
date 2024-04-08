@@ -6,6 +6,9 @@ import useFetch from "../../utils/useFetchImage";
 import Event from "../Event/Event";
 import "./NextEvent.scss";
 import { useLanguage } from "../../utils/LanguageContext";
+import SectionHeading from "../UI/SectionHeading/SectionHeading";
+import Button from "../UI/Button/Button";
+import { nextEventHeading } from "../../data/homePageData";
 
 function NextEvent({ url }) {
   const { data, loading, error } = useFetch(url);
@@ -31,6 +34,9 @@ function NextEvent({ url }) {
     const firstThreeItems = data.slice(0, 3)
     return (
       <div className="next-event__main">
+        <SectionHeading
+          text={nextEventHeading[language]}
+        />
         {firstThreeItems.map((single, index) => {
           return (
             <Event
@@ -42,6 +48,7 @@ function NextEvent({ url }) {
             />
           );
         })}
+        <Button text="See More" href="/events" buttonComponent="link" />
       </div>
     );
   }

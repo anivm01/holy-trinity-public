@@ -1,96 +1,29 @@
 @use "../../partials/colors" as*;
 @use "../../partials/breakpoints" as*;
+@use "../../partials/global" as*;
 
 .home {
-    &__hero {
-        width: 100%;
-        background-color: $wine-red;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include desktop {
+        max-width: 1280px;
+        padding: 2rem;
+    }
+
+    &__top {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        background-image: url("../../assets/iconostas.jpg");
-        background-size: cover;
-    }
-
-    // &__hero-background {
-    //     background-image: url("../../assets/iconostas.jpg");
-    //     background-size: cover;
-    //     margin: 0 auto;
-    // }
-
-    &__hero-scrollable {
-        max-width: 50rem;
-        max-height: 50vh;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        margin: 2rem 0;
-        border-radius: 20px;
-
-
-        &::-webkit-scrollbar {
-            width: 12px;
-            /* width of the entire scrollbar */
-        }
-
-        &::-webkit-scrollbar-track {
-            background: $golden;
-            border-radius: 20px;
-            /* color of the tracking area */
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: $wine-red;
-            /* color of the scroll thumb */
-            border-radius: 20px;
-            /* roundness of the scroll thumb */
-            border: 3px solid $golden;
-            /* creates padding around scroll thumb */
-        }
-    }
-
-    &__section {
-        text-align: center;
-
-        @include desktop {
-            margin: 1rem 0;
-        }
-
-        &--video {
-            @include desktop {
-                position: relative;
-            }
-        }
-    }
-
-    &__heading {
-        color: $wine-red;
-        padding: .5rem 1rem;
-        width: 100%;
-        font-size: 1.1rem;
-        border-bottom: 4px solid $wine-red;
+        gap: 2rem;
 
         @include tablet {
-            font-size: 1.3rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 2rem;
         }
-
-        @include desktop {
-            max-width: 50rem;
-            margin: 0 auto;
-            font-size: 1.5rem;
-            box-shadow: none;
-        }
-    }
-
-    &__main-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-
-        // @include desktop {
-        //     flex-direction: row;
-        //     align-items: flex-start;
-        // }
     }
 }

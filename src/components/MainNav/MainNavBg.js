@@ -37,6 +37,11 @@ function MainNavBg() {
           </NavLink>
         </li>
         <li className="main-nav__item">
+          <NavLink to="/parish-priest" className="main-nav__link">
+            Енорийски свещтеник
+          </NavLink>
+        </li>
+        <li className="main-nav__item">
           <NavLink to="/donations" className="main-nav__link">
             Дарения
           </NavLink>

@@ -6,9 +6,13 @@ import useFetch from "../../utils/useFetchImage";
 import imageIcon from "../../assets/video-icon.svg";
 import placeholder from "../../assets/sunset-background.jpg";
 import "./LatestWorshipOffice.scss";
+import SectionHeading from "../UI/SectionHeading/SectionHeading";
+import { useLanguage } from "../../utils/LanguageContext";
+import { latestWorshipOfficeHeading } from "../../data/homePageData";
 
 function LatestWorshipOffice({ url }) {
   const { data, loading, error } = useFetch(url);
+  const language = useLanguage()
 
   if (loading) {
     return (
@@ -30,33 +34,38 @@ function LatestWorshipOffice({ url }) {
   if (data) {
     const date = dateObjectConverter(data.date);
     return (
-      <Link
-        to={`/worship-offices/${data.id}`}
-        className="worship-office-latest"
-      >
-        <div className="worship-office-latest__image">
-          {data.src ? (
-            <img className="image" src={data.src} alt={data.description} />
-          ) : (
+      <section>
+        <SectionHeading
+          text={latestWorshipOfficeHeading[language]}
+        />
+        <Link
+          to={`/worship-offices/${data.id}`}
+          className="worship-office-latest"
+        >
+          <div className="worship-office-latest__image">
+            {data.src ? (
+              <img className="image" src={data.src} alt={data.description} />
+            ) : (
+              <img
+                src={placeholder}
+                alt="thumbnail placeholder"
+                className="image"
+              />
+            )}
             <img
-              src={placeholder}
-              alt="thumbnail placeholder"
-              className="image"
+              className="worship-office-latest__icon"
+              src={imageIcon}
+              alt="video icon"
             />
-          )}
-          <img
-            className="worship-office-latest__icon"
-            src={imageIcon}
-            alt="video icon"
-          />
-        </div>
-        <div className="worship-office-latest__text">
-          <h3 className="worship-office-latest__title">{data.title}</h3>
-          <h4 className="worship-office-latest__date">
-            {date.day}, {date.month} {date.date}
-          </h4>
-        </div>
-      </Link>
+          </div>
+          <div className="worship-office-latest__text">
+            <h3 className="worship-office-latest__title">{data.title}</h3>
+            <h4 className="worship-office-latest__date">
+              {date.day}, {date.month} {date.date}
+            </h4>
+          </div>
+        </Link>
+      </section>
     );
   }
   return <div></div>;

@@ -5,9 +5,14 @@ import useFetch from "../../utils/useFetchImage";
 import CommunityNewsMini from "../CommunityNewsMini/CommunityNewsMini";
 import NoData from "../NoData/NoData";
 import "./LatestNews.scss";
+import SectionHeading from "../UI/SectionHeading/SectionHeading";
+import Button from "../UI/Button/Button";
+import { useLanguage } from "../../utils/LanguageContext";
+import { latestNewsHeading } from "../../data/homePageData";
 
 function LatestNews({ url }) {
   const { data, loading, error } = useFetch(url);
+  const language = useLanguage()
 
   if (loading) {
     return (
@@ -29,6 +34,9 @@ function LatestNews({ url }) {
   if (data) {
     return (
       <div className="latest-news">
+        <SectionHeading
+          text={latestNewsHeading[language]}
+        />
         <Carousel cols={3} rows={1} gap={10} loop>
           {data.map((single, index) => {
             return (
@@ -38,6 +46,7 @@ function LatestNews({ url }) {
             );
           })}
         </Carousel>
+        <Button text="See More" href="/community-news" buttonComponent="link" />
       </div>
     );
   }

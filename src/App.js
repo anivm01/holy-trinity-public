@@ -15,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 import DonationsPage from "./pages/DonationsPage/DonationsPage";
 import HallPage from "./pages/HallPage/HallPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import ParishPriestPage from "./pages/ParishPriestPage/ParishPriestPage";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/donations" element={<DonationsPage />} />
           <Route path="/hall" element={<HallPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/parish-priest" element={<ParishPriestPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

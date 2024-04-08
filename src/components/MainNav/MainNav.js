@@ -37,6 +37,11 @@ function MainNav() {
           </NavLink>
         </li>
         <li className="main-nav__item">
+          <NavLink to="/parish-priest" className="main-nav__link">
+            Parish Priest
+          </NavLink>
+        </li>
+        <li className="main-nav__item">
           <NavLink to="/donations" className="main-nav__link">
             Donations
           </NavLink>
@@ -46,6 +51,7 @@ function MainNav() {
             Hall for Rent
           </NavLink>
         </li>
+
       </ul>
     </nav>
   );
