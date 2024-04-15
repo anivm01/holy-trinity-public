@@ -2,8 +2,9 @@ import React from "react";
 import "./ParishPriestPage.scss";
 import { useLanguage } from "../../utils/LanguageContext";
 import ParishPriestBio from "../../components/ParishPriestBio/ParishPriestBio";
-import { PageTitle } from "../../components/UI/PageTitle/PageTitle";
+
 import { parishPriestTitle } from "../../data/parishPriestData";
+import { PageTitle } from "../../components/UI";
 
 
 function ParishPriestPage() {

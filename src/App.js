@@ -16,6 +16,8 @@ import DonationsPage from "./pages/DonationsPage/DonationsPage";
 import HallPage from "./pages/HallPage/HallPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import ParishPriestPage from "./pages/ParishPriestPage/ParishPriestPage";
+import BroadcastsPage from "./pages/BroadcastsPage/BroadcastsPage";
+import BroadcastsSingle from "./components/Broadcasts/BroadcastsSingle/BroadcastsSingle";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
           <Route path="/hall" element={<HallPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/parish-priest" element={<ParishPriestPage />} />
+          <Route path="/broadcasts" element={<BroadcastsPage />} />
+          <Route path="/broadcasts/:id" element={<BroadcastsSingle />} />
         </Routes>
         <Footer />
       </BrowserRouter>

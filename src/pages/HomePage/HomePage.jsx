@@ -6,8 +6,9 @@ import NextEvent from "../../components/NextEvent/NextEvent";
 import LatestNews from "../../components/LatestNews/LatestNews";
 import LatestWorshipOffice from "../../components/LatestWorshipOffice/LatestWorshipOffice";
 import { HomeProfile } from "../../components/HomeProfile/HomeProfile";
-import { PageTitle } from "../../components/UI/PageTitle/PageTitle";
+
 import { homeTitle } from "../../data/pageTitles";
+import { PageTitle } from "../../components/UI";
 function HomePage() {
   const language = useLanguage();
   const currentDate = Math.floor(Date.now() / 1000);
@@ -23,9 +24,7 @@ function HomePage() {
               url={`${API_URL}/published/${language}/worship-offices/latest/${currentDate}`}
             />
           </div>
-          <NextEvent
-            url={`${API_URL}/event/upcoming/${currentDate}`}
-          />
+          <NextEvent url={`${API_URL}/event/upcoming/${currentDate}`} />
         </div>
         <LatestNews
           url={`${API_URL}/published/${language}/articles/latest/${currentDate}`}
