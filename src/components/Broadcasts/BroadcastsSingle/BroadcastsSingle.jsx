@@ -19,7 +19,7 @@ const BroadcastsSingle = () => {
   const params = useParams();
   const language = useLanguage();
   const { data, loading, error } = useFetch(
-    `${API_URL}broadcasts/${params.id}`
+    `${API_URL}/broadcasts/${params.id}`
   );
 
   if (loading) {
