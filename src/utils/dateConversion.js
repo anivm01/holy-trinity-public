@@ -73,11 +73,15 @@ export const wholeDateObjectConverter = (date) => {
 
     return {
         year: dateArray[3],
-        month: dateArray[1],
+        month: {
+            en: dateArray[1],
+            bg: monthsBg[dateArray[1]]
+        },
         date: dateArray[2],
-        day: dateArray[0],
-        monthBg: monthsBg[dateArray[1]],
-        dayBg: daysBg[dateArray[0]],
+        day: {
+            en: dateArray[0],
+            bg: daysBg[dateArray[0]]
+        },
         time: time,
     };
 }
