@@ -8,7 +8,7 @@ import "./NextEvent.scss";
 import { useLanguage } from "../../utils/LanguageContext";
 import SectionHeading from "../UI/SectionHeading/SectionHeading";
 import Button from "../UI/Button/Button";
-import { nextEventHeading } from "../../data/homePageData";
+import { nextEventHeading } from "../../data/homePageStaticContent";
 
 function NextEvent({ url }) {
   const { data, loading, error } = useFetch(url);

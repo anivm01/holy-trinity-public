@@ -8,7 +8,7 @@ import placeholder from "../../assets/sunset-background.jpg";
 import "./LatestWorshipOffice.scss";
 import SectionHeading from "../UI/SectionHeading/SectionHeading";
 import { useLanguage } from "../../utils/LanguageContext";
-import { latestWorshipOfficeHeading } from "../../data/homePageData";
+import { latestWorshipOfficeHeading } from "../../data/homePageStaticContent";
 
 function LatestWorshipOffice({ url }) {
   const { data, loading, error } = useFetch(url);

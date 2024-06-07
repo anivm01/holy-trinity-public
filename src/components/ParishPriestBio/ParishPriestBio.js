@@ -1,7 +1,7 @@
 import React from "react";
 import "./ParishPriestBio.scss";
 import parishPriest from "../../assets/parish-priest.jpg"
-import { biography, biographySubtitle, documents, documentsSubtitle } from "../../data/parishPriestData";
+import { biography, biographySubtitle, documents, documentsSubtitle } from "../../data/parishPriestStaticContent";
 import LinkWithIcon from "../UI/LinkWithIcon/LinkWithIcon";
 import { useLanguage } from "../../utils/LanguageContext";
 import SectionHeading from "../UI/SectionHeading/SectionHeading";

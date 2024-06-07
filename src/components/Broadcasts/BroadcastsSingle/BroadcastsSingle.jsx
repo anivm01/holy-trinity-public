@@ -13,7 +13,7 @@ import {
   ourFatherTitle,
   symbol,
   symbolTitle,
-} from "../../../data/prayersData";
+} from "../../../data/prayersStaticContent";
 
 const BroadcastsSingle = () => {
   const params = useParams();

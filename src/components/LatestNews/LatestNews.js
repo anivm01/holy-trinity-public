@@ -8,7 +8,7 @@ import "./LatestNews.scss";
 import SectionHeading from "../UI/SectionHeading/SectionHeading";
 import Button from "../UI/Button/Button";
 import { useLanguage } from "../../utils/LanguageContext";
-import { latestNewsHeading } from "../../data/homePageData";
+import { latestNewsHeading } from "../../data/homePageStaticContent";
 
 function LatestNews({ url }) {
   const { data, loading, error } = useFetch(url);

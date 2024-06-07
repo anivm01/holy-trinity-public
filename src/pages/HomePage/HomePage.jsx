@@ -9,6 +9,8 @@ import { HomeProfile } from "../../components/HomeProfile/HomeProfile";
 
 import { homeTitle } from "../../data/pageTitles";
 import { PageTitle } from "../../components/UI";
+import LatestBroadcast from "../../components/HomeContent/LatestBroadcast/LatestBroadcast";
+import ParishPriestBlurb from "../../components/HomeContent/ParishPriestBlurb/ParishPriestBlurb";
 function HomePage() {
   const language = useLanguage();
   const currentDate = Math.floor(Date.now() / 1000);
@@ -20,11 +22,15 @@ function HomePage() {
         <div className="home__top">
           <div className="home__left">
             <HomeProfile />
+            <LatestBroadcast />
             <LatestWorshipOffice
               url={`${API_URL}/published/${language}/worship-offices/latest/${currentDate}`}
             />
           </div>
-          <NextEvent url={`${API_URL}/event/upcoming/${currentDate}`} />
+          <div>
+            <NextEvent url={`${API_URL}/event/upcoming/${currentDate}`} />
+            <ParishPriestBlurb />
+          </div>
         </div>
         <LatestNews
           url={`${API_URL}/published/${language}/articles/latest/${currentDate}`}

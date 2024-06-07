@@ -3,7 +3,10 @@ export const latestWorshipOfficeHeading = {
     bg: "Присъединете се към службата тази седмица през интернет",
     en: "Join us online for our latest Worship Office"
 }
-
+export const latestBroadcastHeading = {
+    bg: "Присъединете се към службата тази седмица през интернет",
+    en: "Join us online for our latest Broadcast"
+}
 export const latestNewsHeading = {
     bg: "Последни новини от нашата общност",
     en: "Latest News From Our Community"
@@ -24,7 +27,7 @@ export const parishPriestSection = {
         bg: "През 2013 г. Протоиерей Величко Михайлов наследи отец Кръстан Вукашинов като енорийски свещеник на тази енория която носи името “Holy Trinity Macedono-Bulgarian Eastern Orthodox Church”."
     },
     link: {
-        en: "See Full Bio",
-        bg: "Вижте пълната биография"
+        en: "More",
+        bg: "Вижте повече"
     }
 }
