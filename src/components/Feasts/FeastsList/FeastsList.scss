@@ -1,0 +1,16 @@
+@use "../../../partials/colors" as*;
+@use "../../../partials/breakpoints" as*;
+
+.feasts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    @include desktop {
+        gap: 2rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+}

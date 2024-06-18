@@ -1,0 +1,52 @@
+@use "../../../partials/colors" as*;
+@use "../../../partials/breakpoints" as*;
+
+.broadcast {
+    width: 100%;
+    background-color: $golden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // min-height: calc(100vh - 74px);
+
+    // @include tablet {
+    //     min-height: calc(100vh - 95.25px);
+    // }
+
+    // @include desktop {
+    //     min-height: calc(100vh - 143px);
+    // }
+
+    &__hero {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-image: url("../../../assets/sunset-background.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        align-items: center;
+    }
+
+    &__video {
+        aspect-ratio: 16/9;
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+
+        @include desktop {
+            max-width: 65rem;
+        }
+    }
+
+
+    &__prayers {
+        padding: 1rem 0;
+        width: 100%;
+        background-color: $wine-red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}

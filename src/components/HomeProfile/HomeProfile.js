@@ -2,7 +2,7 @@ import React from 'react'
 import parishPriest from "../../assets/parish-priest.jpg"
 import "./HomeProfile.scss"
 import { useLanguage } from '../../utils/LanguageContext'
-import { parishPriestSection } from '../../data/homePageData'
+import { parishPriestSection } from '../../data/homePageStaticContent'
 import { Link } from 'react-router-dom'
 export const HomeProfile = () => {
     const language = useLanguage()
