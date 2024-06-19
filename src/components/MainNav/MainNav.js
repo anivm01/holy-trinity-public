@@ -12,12 +12,12 @@ function MainNav() {
           </NavLink>
         </li>
         <li className="main-nav__item">
-          <NavLink to="/worship-offices" className="main-nav__link">
+          <NavLink to="/broadcasts" className="main-nav__link">
             Broadcasts
           </NavLink>
         </li>
         <li className="main-nav__item">
-          <NavLink to="/events" className="main-nav__link">
+          <NavLink to="/feasts" className="main-nav__link">
             Feasts
           </NavLink>
         </li>
