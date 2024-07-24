@@ -40,7 +40,7 @@ function UpcomingFeasts() {
           return <FeastsListItem key={index} item={single} />;
         })}
 
-        <Button text="See More" href="/events" buttonComponent="link" />
+        <Button text="See More" href="/feasts" buttonComponent="link" />
       </div>
     );
   }
