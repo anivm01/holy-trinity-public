@@ -13,14 +13,14 @@ function About() {
         support any political organizations, groups or countries.
       </p>
       <p className="about__text">
-            The parish is an exclusively religious and spiritual entity. The
-            Holy Trinity church is a spiritual home of faithful Eastern-Orthodox
-            Christians from Macedonia, Bulgaria and Canada. It is part of the
-            Bulgarian Eastern-Orthodox Diocese of the USA, Canada and Australia.
-          </p>
-          <a href="https://www.bulgariandiocese.org" className="about__link">
-            https://www.bulgariandiocese.org
-          </a>
+        The parish is an exclusively religious and spiritual entity. The
+        Holy Trinity church is a spiritual home of faithful Eastern-Orthodox
+        Christians from Macedonia, Bulgaria and Canada. It is part of the
+        Bulgarian Eastern-Orthodox Diocese of the USA, Canada and Australia.
+      </p>
+      <a href="https://www.bulgariandiocese.org" className="about__link">
+        https://www.bulgariandiocese.org
+      </a>
       <div className="about__box">
         <img
           className="about__image"
@@ -40,11 +40,11 @@ function About() {
             activities.
           </p>
           <p className="about__text">
-        The affairs of the church are regulated by Orthodox Christian teachings,
-        Apostolic Rules, practices of the Eastern-Orthodox Faith, the church
-        bylaws and the laws governing charitable organizations in the Province
-        of Ontario.
-      </p>
+            The affairs of the church are regulated by Orthodox Christian teachings,
+            Apostolic Rules, practices of the Eastern-Orthodox Faith, the church
+            bylaws and the laws governing charitable organizations in the Province
+            of Ontario.
+          </p>
         </div>
       </div>
       <h2 className="about__heading">The Church Board of Trustees</h2>
@@ -83,7 +83,7 @@ function About() {
       <a
         className="about__link"
         href="mailto:ourholytrinitymbc@gmail.com"
-        target="_blank"
+        target="_blank" rel="noreferrer"
       >
         Contact us for more details
       </a>
@@ -154,26 +154,398 @@ function About() {
         major organizational contribution was provided by Chris Kizoff. Funds
         for the iconostasis (built and painted by Nicola Kovatchev), for new
         windows, banners and church accessories was donated by devoted
-        parishioners:
+        parishioners.
       </p>
       <p className="about__text">
-        Nikola Shaikov, Nick Stefanoff, Larry Koroloff, Lambro Lazar Koroloff,
-        Boris and Slavka Dimitroff, Done and El. Chalev, Sofa and Mary Velkov,
-        Nick, Luba, Steven Velkov, Phillip and Dimana Vouchkoff, Pando and
-        Dafina Pereloff, Pencho and Christina Hr. Pereloff, Ivan and Verka
-        Simeonoff, Decho Balkanoff, Stoian and Luba Tanousheff, Stefan and Todor
-        Malinoff, Nikola and Dita Mihailoff, Spase and Zorka Ouslis, Zoe Dane
-        Perova, Lazar and Jivka Tzafaroff, Maria Pencho Novachkova, Kiril and
-        Columbia Mihailousheff, Krystiu and Vangelia Dzundzuroff, Spas Zapreff,
-        Bob and Olga Kelly, Reverend and Prezbithera Vasil and Raina Mihailoff,
-        Stoia Pavlova, Dimitar and Fana Atzeff, Kiril and Venera Argiloff, Assen
-        and Frida Kotzeff, Atanas and Maria Ikonomoff, Toshko Tzilev, Limonka
-        and Nikola Boiadjiev, Lazar and Kitza Korolov, Stoian and Sofia Peikos,
-        Vangel and Elenka Vouchkoff, Gicho and Tamy Goulin, Panaiot and Dotza
-        Boichevski. The Kolaroff family donated the leading wall icon of the
-        Holy Trinity in memory of their parents Elia and Sofia Arabadjieff and
-        Vasil and Sofia Yancoff.
+        Founders of Holy Trinity Macedono-Bulgarian Eastern Orthodox Church:
       </p>
+      <ul className="about__list about__names">
+        <li>
+          <p className="about__text">
+            Alex and Christina Alexopoulos
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Mike and Patra Alexopoulos
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Traiko and Zoya Alexopoulos
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Chris and Tina Andonoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Traiko and Latsa Andonoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Boris and Zora Argiloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Kiril and Venera Argiloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Dimitar and Dana Atzeff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Decho Balkanoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Steve and Chrisoula Balkou
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Helen Bodanis
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Panaiot and Dotza Boichevski
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Nikola and Limonka Boyadjieff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Chris and Mary Bozinoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Doné and Lena Chaleff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Boris and Slavka Dimitroff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Christina Doreff and Family
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Trifon Doumoschieff and Family
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Krystiu and Vangelia Dzundzuroff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Gicho and Tomy Goulin
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Damian and Mary Guleff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Atanas and Maria Ikonomoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Bob and Olga Kelly
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Chris and Raina Kizoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Olga Kizoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Nick and Lena Kolaroff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Fred and Donna Corollas
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            George Koroloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Olga Koroloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Lambro Lazar Koroloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Larry Koroloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Lazar and Kutsa Koroloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Assen and Frida Kotzeff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Kiro and Grozda Kirkoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Mona Lefkos
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            George and Tala Lexovsky
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Traiko and Zoya Lexovsky
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Stefan and Todor Malinoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Chris Malaganoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            George and Tsveta Markoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Spas and Helen Markoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            George and Florence Marks
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Milka (Thomas) Meanchoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Philip and Evda Meanchoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Fred Meanchoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Ron Meanchoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Luba Meschino
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Donna Meyer
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Reverend and Prezbithera Vasil and Raina Mihailoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Nikola and Ditta Mihailoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Kiril and Columbia Mihailousheff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Spaska Nachoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Mary Nick
+            Atanas and Lena Novachkoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Maria Pencho Novachkova
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            James and Ditta Ouslis
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Spase and Zorka Ouslis
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Stoia Pavlova
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Stoian and Sofia Peikos
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Panda and Safina Pereloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Pencho and Christina Pereloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Zoe (Dane) Perova
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Nikola Shaikov
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Ivan and Verka Simeonoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Michael and Donka Stefanoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Nicholas Stefanoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Stoian and Luba Tanousheff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Sam and Margaret Todoroff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Tsveta Todoroff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Lazo and Jivka Tsafaroff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Toshko Tzilev
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            George and Tsveta Varadeff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Mano and Betty Vasiloff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Sofa and Mary Velkov
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Nick, Luba and Steven Velkov
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Vangel and Elenka Vouchkoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Philip Vouchkoff
+          </p>
+        </li>
+        <li>
+          <p className="about__text">
+            Spas Zapreff
+          </p> </li>
+      </ul>
       <p className="about__text">
         In August 1981 the parish priest died and no Macedonian-Bulgarian priest
         could be provided by the Russian Church in Exile. In March 1982, the

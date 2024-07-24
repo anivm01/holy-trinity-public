@@ -11,20 +11,24 @@
         color: $wine-red;
         margin: 1rem auto;
     }
+
     &__heading {
         color: $wine-red;
         margin: 1rem auto;
         font-size: 1.1rem;
     }
+
     &__list {
         padding: 0 4rem;
         text-align: left;
         max-width: 40rem;
         margin: 0 auto;
-        &> li {
+
+        &>li {
             color: $wine-red;
         }
     }
+
     &__link {
         color: $wine-red;
         margin: 1rem auto;
@@ -45,12 +49,37 @@
 
     &__image {
         width: 100%;
+
         @include tablet {
             width: 40%;
         }
     }
+
     &__history {
         width: 100%;
         margin: 1rem 0;
+    }
+
+    &__names {
+
+        display: block;
+        padding: 2rem;
+
+        @include mid-mobile {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            max-width: 50rem;
+            padding: 0 1rem;
+
+            &>li {
+                margin-right: 0;
+
+                &>p {
+                    margin: 0;
+                }
+            }
+        }
+
+
     }
 }
