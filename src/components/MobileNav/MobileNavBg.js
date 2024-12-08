@@ -28,9 +28,8 @@ function MobileNavBg() {
         <img src={navIcon} className="mobile-nav__icon" alt="menu icon" />
       </button>
       <nav
-        className={`mobile-nav__box ${
-          !navVisible ? "mobile-nav__box--out" : ""
-        } 
+        className={`mobile-nav__box ${!navVisible ? "mobile-nav__box--out" : ""
+          } 
         ${noAnimation ? "mobile-nav__box--none" : ""} 
         `}
       >
@@ -42,12 +41,12 @@ function MobileNavBg() {
               </NavLink>
             </li>
             <li className="mobile-nav__item">
-              <NavLink to="/worship-offices" className="mobile-nav__link">
+              <NavLink to="/broadcasts" className="mobile-nav__link">
                 Предавания на Живо
               </NavLink>
             </li>
             <li className="mobile-nav__item">
-              <NavLink to="/events" className="mobile-nav__link">
+              <NavLink to="/feasts" className="mobile-nav__link">
                 Събития
               </NavLink>
             </li>
