@@ -1,0 +1,49 @@
+@use "../../partials/colors" as*;
+@use "../../partials/breakpoints" as*;
+
+.feasts-page {
+    &__main {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include desktop {
+
+            flex-direction: row
+        }
+    }
+
+    &__calendar {
+        text-align: center;
+        color: $wine-red;
+        width: 100%;
+        margin-top: 2rem;
+        max-width: 37.5rem;
+    }
+
+    &__invite {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        flex-direction: column;
+        max-width: 600px;
+        gap: 2rem;
+    }
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 16/9;
+
+    }
+
+    &__blurb {
+        color: $wine-red;
+        max-width: 55ch;
+        text-align: center;
+        line-height: 1.1;
+        font-style: italic;
+    }
+}

@@ -53,4 +53,9 @@ export const fetchAnnouncement = async () => {
   return data;
 };
 
+export const fetchCalendar = async () => {
+  const { data } = await apiClient.get('/calendar/byyear');
+  return data;
+};
+
 

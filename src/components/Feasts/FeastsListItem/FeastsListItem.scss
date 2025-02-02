@@ -7,6 +7,7 @@
     border-right: none;
     background-color: $beige;
     width: 100%;
+    background-color: $golden;
 
     // @include desktop {
     //     // border-left: 1px solid $wine-red;
@@ -25,6 +26,7 @@
 
     &__title {
         font-size: 1.2rem;
+        line-height: 1.2;
     }
 
     &__date {
@@ -33,7 +35,7 @@
     }
 
     &__main {
-        padding: .5rem;
+        padding: .5rem 1rem;
         text-align: center;
         color: $wine-red;
     }
