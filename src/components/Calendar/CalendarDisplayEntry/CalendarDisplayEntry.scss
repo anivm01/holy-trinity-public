@@ -1,0 +1,41 @@
+@use "../../../partials/colors" as*;
+
+.calendar-single {
+    width: 100%;
+    margin: 0 auto;
+    gap: .5rem;
+    color: $wine-red;
+    font-size: 1rem;
+    color: black;
+    font-weight: 400;
+    display: flex;
+    border-bottom: 1px solid $wine-red;
+
+
+    &__date {
+        display: flex;
+        gap: .5rem;
+        font-weight: inherit;
+    }
+
+    &__entry {
+        padding: .25rem;
+        display: flex;
+        font-weight: inherit;
+    }
+
+    &__title {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    &__bold {
+        font-weight: bold;
+    }
+
+    &__red {
+        color: red;
+    }
+}
