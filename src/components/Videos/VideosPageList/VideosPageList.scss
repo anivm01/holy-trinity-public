@@ -1,0 +1,16 @@
+@use "../../../partials/colors" as*;
+@use "../../../partials/breakpoints" as*;
+
+.videos-page-list {
+    margin: 0 auto;
+    padding: 1rem;
+
+    @include tablet {
+        padding: 1.5rem;
+    }
+
+    @include desktop {
+        padding: 2rem;
+    }
+
+}

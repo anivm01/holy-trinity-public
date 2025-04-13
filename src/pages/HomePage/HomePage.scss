@@ -10,12 +10,32 @@
     flex-direction: column;
     gap: 2rem;
 
+
+
     @include desktop {
-        max-width: 1280px;
-        padding: 2rem;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: (url(../../assets/church-doors.jpg));
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            //opacity: 0.4;
+            z-index: -1;
+        }
     }
 
-    &__top {
+    &__container {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -24,6 +44,13 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             grid-gap: 2rem;
+        }
+
+        @include desktop {
+            max-width: 80rem;
+            padding: 2rem;
+            margin: 0 auto;
+            width: 100%;
         }
     }
 }

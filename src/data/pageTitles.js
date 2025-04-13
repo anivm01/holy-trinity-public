@@ -13,3 +13,13 @@ export const feastsTitle = {
     en: "Upcoming Feasts at HOLY TRINITY MACEDONO-BULGARIAN EASTERN ORTHODOX CHURCH",
     bg: "Събития в СВЕТА ТРОИЦА МАКЕДОНО-БЪЛГАРСКА ИЗТОЧНО-ПРАВОСЛАВНА ЦЪРКВА"
 }
+
+export const videosTitle = {
+    en: "Reflections, Messages and Prayers",
+    bg: "Размисли, послания и молитви"
+}
+
+export const obitsTitle = {
+    en: "In Memoriam",
+    bg: "Упокой Господи дуиште на починалите"
+}

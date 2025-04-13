@@ -4,12 +4,17 @@ export const latestWorshipOfficeHeading = {
     en: "Join us online for our latest Worship Office"
 }
 export const latestBroadcastHeading = {
-    bg: "Присъединете се към службата тази седмица през интернет",
-    en: "Join us online for our latest Broadcast"
+    bg: "Присъединете се към нас чрез предаването на живо на църковната служба",
+    en: "Join us for the live broadcast of our church service"
 }
 export const latestNewsHeading = {
     bg: "Последни новини от нашата общност",
     en: "Latest News From Our Community"
+}
+
+export const latestVideosHeading = {
+    bg: "Видео послания от отец Михайлов – За размисъл и духовна полза",
+    en: "Video Messages from Father Mihaylov  - For Thought and Spiritual Growth"
 }
 
 export const nextEventHeading = {

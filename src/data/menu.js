@@ -5,19 +5,14 @@ export const menuItems = [
         link: "/"
     },
     {
-        en: "Broadcasts",
-        bg: "Предавания на Живо",
-        link: "/worship-offices"
+        en: "Videos",
+        bg: "Видеота",
+        link: "/videos"
     },
     {
         en: "Feasts",
         bg: "Събития",
-        link: "/events"
-    },
-    {
-        en: "Community News",
-        bg: "Новини",
-        link: "/community-news"
+        link: "/feasts"
     },
     {
         en: "In Memoriam",
