@@ -59,3 +59,8 @@ export const fetchCalendar = async () => {
 };
 
 
+export const fetchVideos = async () => {
+  const { data } = await apiClient.get('/videos');
+  return data;
+};
+

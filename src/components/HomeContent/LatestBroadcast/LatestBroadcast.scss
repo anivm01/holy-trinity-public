@@ -78,3 +78,26 @@
         }
     }
 }
+
+.broadcast {
+    &__hero {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-image: url("../../../assets/sunset-background.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        align-items: center;
+    }
+
+    &__video {
+        aspect-ratio: 16/9;
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+
+        @include desktop {
+            max-width: 65rem;
+        }
+    }
+}

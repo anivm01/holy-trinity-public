@@ -1,12 +1,8 @@
 import React from "react";
 import "./Obituary.scss";
 import cross from "../../assets/cross.svg";
-import ImageDeliverer from "../ImageDeliverer/ImageDeliverer";
-import { API_URL } from "../../utils/api";
-import { useLanguage } from "../../utils/LanguageContext";
 import { Link } from "react-router-dom";
 import { createMarkup } from "../../utils/createMarkup";
-import Image from "../Image/Image";
 
 function Obituary({ item }) {
   const content = createMarkup(item.obituary);
@@ -27,7 +23,7 @@ function Obituary({ item }) {
           className="obituary__content"
           dangerouslySetInnerHTML={content}
         ></div>
-        {content.__html.length > 8 && 
+        {content.__html.length > 8 &&
           <Link className="obituary__continue" to={`/in-memoriam/${item.id}`}>
             View...
           </Link>
