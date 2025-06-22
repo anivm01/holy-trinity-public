@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./CommunityNewsList.scss";
 import CommunityNewsPreview from "../CommunityNewsPreview/CommunityNewsPreview";
-import NoData from "../NoData/NoData";
+import NoData from "../../components/NoData/NoData";
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../utils/useFetch";
-import PaginationContainer from "../PaginationContainer/PaginationContainer";
+import PaginationContainer from "../../components/PaginationContainer/PaginationContainer";
 
 function CommunityNewsList({ url }) {
   const { data, loading, error } = useFetch(url);
