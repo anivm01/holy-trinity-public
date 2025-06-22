@@ -19,8 +19,8 @@ function HomePage() {
       <div className="home">
         <div className="home__container">
           <div>
-            <Announcement />
             <LatestBroadcast />
+            <Announcement />
           </div>
           <div>
             <UpcomingFeasts />
