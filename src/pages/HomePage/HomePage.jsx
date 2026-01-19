@@ -10,6 +10,7 @@ import ParishPriestBlurb from "../../components/HomeContent/ParishPriestBlurb/Pa
 import UpcomingFeasts from "../../components/HomeContent/UpcomingFeasts/UpcomingFeasts";
 import Announcement from "../../components/HomeContent/Announcement/Announcement";
 import LatestVideos from "../../components/HomeContent/LatestVideos/LatestVideos";
+import SpecialMessage from "../../components/SpecialMessage/SpecialMessage";
 function HomePage() {
   const language = useLanguage();
 
@@ -17,6 +18,7 @@ function HomePage() {
     <main>
       <PageTitle title={homeTitle[language]} />
       <div className="home">
+        <SpecialMessage />
         <div className="home__container">
           <div>
             <LatestBroadcast />
