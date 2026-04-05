@@ -12,8 +12,6 @@ function CalendarDisplayEntry({ single }) {
       en: single.title || "No English Title",
       bg: single.title_bg || "Няма Заглавие",
     },
-    // title: single.title || "No English Title",
-    // titleBg: single.title_bg || "No Bulgrarian Title",
     cross: single.cross,
     bold: single.bold,
     red: single.red,
