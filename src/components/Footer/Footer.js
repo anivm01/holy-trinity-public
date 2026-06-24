@@ -15,8 +15,8 @@ function Footer() {
         <div className="footer__block footer__block--start">
           <h3>{footerContent.address.heading[language]}</h3>
           <address>
-            <p>{footerContent.address.address.line1[language]}</p>
-            <p>{footerContent.address.address.line2[language]}</p>
+            <p>{footerContent.address.address.line1}</p>
+            <p>{footerContent.address.address.line2}</p>
             <p>{footerContent.phone.heading[language]}: {footerContent.phone.number}</p>
             <p>
               <span>{footerContent.email.heading[language]}:</span>
