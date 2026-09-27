@@ -19,6 +19,11 @@ export const videosTitle = {
     bg: "Размисли, послания и молитви"
 }
 
+export const libraryTitle = {
+    en: "Library",
+    bg: "Библиотека"
+}
+
 export const obitsTitle = {
     en: "In Memoriam",
     bg: "Упокой Господи дуиште на починалите"
