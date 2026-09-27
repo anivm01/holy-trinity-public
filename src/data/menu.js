@@ -15,6 +15,11 @@ export const menuItems = [
         link: "/feasts"
     },
     {
+        en: "Library",
+        bg: "Библиотека",
+        link: "/library"
+    },
+    {
         en: "In Memoriam",
         bg: "За Помен",
         link: "/in-memoriam"

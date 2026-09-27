@@ -3,6 +3,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import HomePage from "./pages/HomePage/HomePage";
+import LibraryPage from "./pages/LibraryPage/LibraryPage";
 import InMemoriamPage from "./pages/InMemoriamPage/InMemoriamPage";
 import { LanguageProvider } from "./utils/LanguageContext";
 import ObituaryFull from "./components/ObituaryFull/ObituaryFull";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/parish-priest" element={<ParishPriestPage />} />
           <Route path="/feasts" element={<FeastsPage />} />
           <Route path="/videos" element={<VideosPage />} />
+          <Route path="/library" element={<LibraryPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
