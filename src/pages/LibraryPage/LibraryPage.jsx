@@ -9,7 +9,7 @@ import "./LibraryPage.scss";
 const copy = {
   en: {
     eyebrow: "Parish collection",
-    introduction: `This library is a collection of recommended English-language books exploring the Orthodox Christian faith from many perspectives, including theology, spiritual life, Church history, worship, prayer, the lives of the saints, and more. The list was thoughtfully compiled by one of our parishioners as a resource for anyone wishing to learn more about the faith and deepen their understanding of Orthodox Christianity. Otetz Velichko has a number of these books in his personal collection. If you are interested in reading a particular title, please feel free to contact him to ask whether a copy is available to borrow.`,
+    introduction: `This library is a collection of recommended English-language books exploring the Orthodox Christian faith from many perspectives, including theology, spiritual life, Church history, worship, prayer, the lives of the saints, and more. The list was thoughtfully compiled by one of our parishioners as a resource for anyone wishing to learn more about the faith and deepen their understanding of Orthodox Christianity.`,
     searchLabel: "Search the library",
     searchPlaceholder: "Search by author, title, or subject",
     clearSearch: "Clear search",
@@ -22,7 +22,7 @@ const copy = {
   },
   bg: {
     eyebrow: "Енорийска колекция",
-    introduction: `Тази библиотека съдържа препоръчани книги на английски език, посветени на различни аспекти на православната вяра – богословие, духовен живот, църковна история, богослужение, молитва, жития на светци и други. Списъкът е внимателно съставен от един от нашите енориаши като полезен източник за всеки, който желае да научи повече за вярата и да задълбочи познанията си за Православието. Отец Величко притежава част от тези книги в личната си библиотека. Ако се интересувате от определено заглавие и желаете да го прочетете, можете да се свържете с него, за да попитате дали книгата е налична за заемане.`,
+    introduction: `Тази библиотека съдържа препоръчани книги на английски език, посветени на различни аспекти на православната вяра – богословие, духовен живот, църковна история, богослужение, молитва, жития на светци и други. Списъкът е внимателно съставен от един от нашите енориаши като полезен източник за всеки, който желае да научи повече за вярата и да задълбочи познанията си за Православието.`,
     searchLabel: "Търсене в библиотеката",
     searchPlaceholder: "Търсене по автор, заглавие или тема",
     clearSearch: "Изчистване на търсенето",
