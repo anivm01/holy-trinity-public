@@ -1,42 +1,56 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Obituary from "../Obituary/Obituary";
 import "./Obituaries.scss";
-import { createMarkup } from "../../utils/createMarkup";
 import { useLanguage } from "../../utils/LanguageContext";
 import { ThreeDots } from "react-loader-spinner";
 import NoData from "../NoData/NoData";
 import useFetch from "../../utils/useFetchImage";
 import PaginationContainer from "../PaginationContainer/PaginationContainer";
+import { API_URL } from "../../utils/api";
+import { hasLocalizedObituary } from "../../utils/obituaryLocalization";
 
-function Obituaries({ url }) {
-  const { data, loading, error } = useFetch(url);
+function Obituaries() {
+  const language = useLanguage();
+  const { data, loading, error } = useFetch(`${API_URL}/obituaries`);
   const [dataPerPage, setDataPerPage] = useState([]);
+  const localizedData = useMemo(
+    () =>
+      Array.isArray(data)
+        ? data.filter((obituary) =>
+            hasLocalizedObituary(obituary, language)
+          )
+        : [],
+    [data, language]
+  );
 
   if (loading) {
-    <ThreeDots
-      height="80"
-      width="80"
-      radius="9"
-      color="#6F0B20"
-      ariaLabel="three-dots-loading"
-      wrapperStyle={{ justifyContent: "center" }}
-      wrapperClassName=""
-      visible={true}
-    />;
+    return (
+      <ThreeDots
+        height="80"
+        width="80"
+        radius="9"
+        color="#6F0B20"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{ justifyContent: "center" }}
+        wrapperClassName=""
+        visible={true}
+      />
+    );
   }
   if (error) {
     return <NoData />;
   }
-  if (data) {
+  if (localizedData.length) {
     return (
       <PaginationContainer
-        data={data}
+        key={language}
+        data={localizedData}
         numberOfPostsPerPage={10}
         setDataPerPage={setDataPerPage}
       >
         <section className="obituaries">
-          {dataPerPage.map((single, index) => {
-            return <Obituary key={index} item={single} />;
+          {dataPerPage.map((single) => {
+            return <Obituary key={single.id} item={single} />;
           })}
         </section>
       </PaginationContainer>

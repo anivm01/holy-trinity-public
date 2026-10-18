@@ -3,20 +3,31 @@ import "./Obituary.scss";
 import cross from "../../assets/cross.svg";
 import { Link } from "react-router-dom";
 import { createMarkup } from "../../utils/createMarkup";
+import { useLanguage } from "../../utils/LanguageContext";
+import { getLocalizedObituary } from "../../utils/obituaryLocalization";
 
 function Obituary({ item }) {
-  const content = createMarkup(item.obituary);
+  const language = useLanguage();
+  const localizedObituary = getLocalizedObituary(item, language);
+  const content = createMarkup(localizedObituary.content);
+
   return (
     <article className="obituary">
       <div className="obituary__border">
         <div className="obituary__top">
           <div className="obituary__info">
             <img className="obituary__cross" src={cross} alt="cross" />
-            <h3 className="obituary__name">{item.name}</h3>
+            <h3 className="obituary__name">{localizedObituary.name}</h3>
             <h4 className="obituary__years">{item.years}</h4>
           </div>
           <div className="obituary__image">
-            {item.src && <img src={item.src} alt={item.description} className="image" />}
+            {item.image_url && (
+              <img
+                src={item.image_url}
+                alt={localizedObituary.name}
+                className="image"
+              />
+            )}
           </div>
         </div>
         <div
