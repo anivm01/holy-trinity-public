@@ -3,7 +3,7 @@ import "./ObituaryFull.scss";
 import cross from "../../assets/cross.svg";
 import { API_URL } from "../../utils/api";
 import { useLanguage } from "../../utils/LanguageContext";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import useFetch from "../../utils/useFetchImage";
 import NoData from "../NoData/NoData";
 import { ThreeDots } from "react-loader-spinner";
@@ -40,7 +40,7 @@ function ObituaryFull() {
   }
   if (data) {
     if (!hasLocalizedObituary(data, language)) {
-      return <NoData />;
+      return <Navigate to="/in-memoriam" replace />;
     }
 
     const localizedObituary = getLocalizedObituary(data, language);
