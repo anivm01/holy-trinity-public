@@ -6,10 +6,10 @@ import { useAnnouncement } from "../../../queries";
 import { createMarkup } from "../../../utils/createMarkup";
 
 function Announcement() {
-  const { data, loading, error } = useAnnouncement();
+  const { data, isLoading, error } = useAnnouncement();
   const language = useLanguage();
 
-  if (loading) {
+  if (isLoading) {
     return (
       <ThreeDots
         height="80"
@@ -23,25 +23,33 @@ function Announcement() {
       />
     );
   }
-  if (error) {
-    console.log("Latest Broadcast data didn't load");
-    return <div></div>;
+
+  if (error || !data) {
+    return null;
   }
-  if (data) {
-    const announcement = {
-      en: data.announcement,
-      bg: data.announcement_bg,
-    };
-    return (
-      <section>
-        <div
-          className="announcement"
-          dangerouslySetInnerHTML={createMarkup(announcement[language])}
-        ></div>
-      </section>
-    );
+
+  const announcement = {
+    en: data.announcement,
+    bg: data.announcement_bg,
+  };
+  const announcementMarkup = createMarkup(announcement[language] || "");
+  const announcementText = new DOMParser()
+    .parseFromString(announcementMarkup.__html, "text/html")
+    .body.textContent.replace(/\u00a0/g, " ")
+    .trim();
+
+  if (!announcementText) {
+    return null;
   }
-  return <div></div>;
+
+  return (
+    <section>
+      <div
+        className="announcement"
+        dangerouslySetInnerHTML={announcementMarkup}
+      />
+    </section>
+  );
 }
 
 export default Announcement;
