@@ -1,34 +1,43 @@
 import { useLanguage } from "../../utils/LanguageContext";
+import { useVisibleMessage } from "../../queries";
+import { createMarkup } from "../../utils/createMarkup";
 import "./SpecialMessage.scss";
 
 const SpecialMessage = () => {
   const language = useLanguage();
-  const messages = {
-    en: [
-      "Divine Liturgy in English – Sunday, October 25",
-      "Our next monthly Divine Liturgy in English will take place this Sunday, October 25. The service will be conducted entirely in English, while the traditional hymns and chants will remain in Church Slavonic.",
-      "We warmly invite everyone to join us for worship and fellowship!",
-    ],
-    bg: [
-      "Света Литургия на английски език – неделя, 25 октомври",
-      "Тази неделя, 25 октомври, ще се състои поредната ни месечна Света Литургия на английски език. Богослужението ще бъде изцяло на английски, а традиционните църковни песнопения ще се изпълняват на църковнославянски език.",
-      "Каним всички енориаши, приятели и гости да се присъединят към нас за обща молитва!",
-    ],
-  };
+  const { data, isLoading, error } = useVisibleMessage();
+
+  if (isLoading || error || !data) {
+    return null;
+  }
+
+  const hasSelectedTranslation =
+    data[`title_${language}`]?.trim() && data[`message_${language}`]?.trim();
+  const displayLanguage = hasSelectedTranslation ? language : "bg";
+  const title = data[`title_${displayLanguage}`];
+  const message = data[`message_${displayLanguage}`];
+  const feastName =
+    data[`associated_feast_name_${displayLanguage}`]?.trim() || "";
+  const introduction =
+    displayLanguage === "bg"
+      ? `Послание от отец Михайлов${
+          feastName ? ` за празника ${feastName}` : ""
+        }.`
+      : `A message from Father Mihaylov${
+          feastName ? ` for the feast of ${feastName}` : ""
+        }.`;
 
   return (
-    <div className="special-message">
-      <div className="special-message__content">
-        {messages[language].map((paragraph, index) => (
-          <p
-            className={index === 0 ? "special-message__title" : undefined}
-            key={paragraph}
-          >
-            {paragraph}
-          </p>
-        ))}
+    <article className="special-message" lang={displayLanguage}>
+      <p className="special-message__introduction">{introduction}</p>
+      <div className="special-message__body">
+        <h2>{title}</h2>
+        <div
+          className="special-message__content"
+          dangerouslySetInnerHTML={createMarkup(message)}
+        />
       </div>
-    </div>
+    </article>
   );
 };
 

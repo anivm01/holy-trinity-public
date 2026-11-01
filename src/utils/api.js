@@ -53,6 +53,11 @@ export const fetchAnnouncement = async () => {
   return data;
 };
 
+export const fetchVisibleMessage = async () => {
+  const { data } = await apiClient.get('/messages/visible');
+  return data;
+};
+
 export const fetchCalendar = async () => {
   const { data } = await apiClient.get('/calendar/byyear');
   return data;
