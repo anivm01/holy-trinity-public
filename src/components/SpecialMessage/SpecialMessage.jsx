@@ -1,6 +1,6 @@
 import { useLanguage } from "../../utils/LanguageContext";
 import { useVisibleMessage } from "../../queries";
-import { createMarkup } from "../../utils/createMarkup";
+import { createMessageMarkup } from "../../utils/createMarkup";
 import "./SpecialMessage.scss";
 
 const SpecialMessage = () => {
@@ -34,7 +34,7 @@ const SpecialMessage = () => {
         <h2>{title}</h2>
         <div
           className="special-message__content"
-          dangerouslySetInnerHTML={createMarkup(message)}
+          dangerouslySetInnerHTML={createMessageMarkup(message)}
         />
       </div>
     </article>
